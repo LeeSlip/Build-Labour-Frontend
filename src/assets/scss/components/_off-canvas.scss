@@ -1,0 +1,40 @@
+.off-canvas {
+  opacity: 1;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+  background:$color--grey;
+  position: fixed;
+  padding: 0 24px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 14;
+  transform: translateX(-100%);
+
+  @include breakpoint(medium) {
+    width: 640px;
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    overflow-y: scroll;
+    transform: translateX(0);
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+
+    a {
+      width: fit-content;
+      color: white;
+      @include hoverline($color--white, 1px);
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}

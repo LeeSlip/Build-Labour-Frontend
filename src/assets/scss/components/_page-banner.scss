@@ -1,0 +1,200 @@
+.page-banner {
+  position: relative;
+  height: fit-content;
+  width: 100vw;
+  background-image: url('../../assets/images/buildblue.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: -25px;
+
+  &__inner {
+    max-width: $content-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 150px 20px 0;
+    @include breakpoint (medium) {
+      display: flex;
+      padding: 270px 20px 0;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 100px;
+    }
+
+    .title-content {
+      @include breakpoint (medium) {
+        max-width: 44%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-width: 60%;
+      }
+      @include breakpoint (medium-large) {
+        max-width: 34%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        max-width: 90%;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-style: normal;
+        font-size: 60px;
+        letter-spacing: -.06em;
+        line-height: 1em;
+        text-transform: none;
+        color: #fff200;
+        @include breakpoint (medium) {
+          font-size: 70px;
+        }
+        @include breakpoint (medium-large) {
+          font-size: 80px;
+        }
+      }
+
+      h3 {
+        font-family: "Helvetica Neue",Arial,sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 30px;
+        letter-spacing: -.04em;
+        line-height: 1em;
+        text-transform: none;
+        color: $color--white;
+        margin-bottom: 30px;
+        @include breakpoint (medium) {
+          margin-bottom: 30px;
+          font-size: 30px;
+        }
+        @include breakpoint (medium-large) {
+          font-size: 36px;
+        }
+      }
+
+      .buttons {
+        display: inline-grid;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        @include breakpoint (medium) {
+          max-width: unset;
+          width: fit-content;
+        }
+        // flex-direction: column;
+
+
+        .btn {
+          display: block;
+          background: #fff200;
+          max-width: fit-content;
+          margin-bottom: 20px;
+          width: fit-content;
+        }
+      }
+    }
+
+    img {
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      @include breakpoint (medium) {
+        max-width: 50%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+        display: block;
+        margin-left: 50px;
+      }
+      @include breakpoint (medium-large) {
+        max-width: 34%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .slick-slider {
+    position: relative;
+    width: 100%;
+    overflow:hidden;
+    margin:24px auto;
+    padding: 0 20px;
+    @include breakpoint (medium) {
+      overflow: visible;
+      max-width: $content-width;
+      margin: 0 auto;
+    }
+    .slick-next {
+      display: none;
+      height: 0;
+      visibility: hidden;
+      z-index: 100;
+      cursor:pointer;
+      @include breakpoint (medium) {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        width: 29px;
+        height: 30px;
+        bottom: -65px;
+        right: calc(50% - 65px);
+      }
+    }
+    .slick-prev {
+      height: 0;
+      display: none;
+      visibility: hidden;
+      z-index: 100;
+      cursor:pointer;
+      @include breakpoint (medium) {
+        display: block;
+        visibility: visible;
+        position: absolute;
+        width: 29px;
+        height: 30px;
+        bottom: -65px;
+        left: calc(50% - 5px);
+      }
+    }
+    .slick-slide {
+      width: 100%;
+      width: 500px;
+      cursor:pointer;
+      transition:all ease-in-out 0.3s;
+      outline: none;
+
+      div {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 300px !important;
+        }
+      }
+    }
+    .slick-active { 
+      
+      div {
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 300px !important;
+          outline: none;
+        }
+      }
+    }
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-track {
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
+  }
+}

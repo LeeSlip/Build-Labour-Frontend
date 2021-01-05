@@ -1,0 +1,29 @@
+$color--blue: #00AEEF;
+$color--yellow: #E8B832;
+$color--grey: #313131;
+$color--white: #ffffff;
+$color--black: #000000;
+
+$font: 'Helvetica Neue', 'sans-serif';
+
+$smaller-width: 1140px;
+$content-width: 1140px;
+$full-width: 1480px;
+
+@import 'global/mixins';
+@import 'global/normalize';
+@import 'global/fonts';
+@import 'global/base';
+@import 'global/buttons';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/main-banner';
+@import 'components/training-banner';
+@import 'components/off-canvas';
+@import 'components/page-banner';
+@import 'components/slider';
+@import 'components/create-profile-banner';
+@import 'components/faq';
+@import 'components/accordion';
+@import 'components/features';

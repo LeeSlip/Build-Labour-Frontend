@@ -1,0 +1,99 @@
+::-moz-selection {
+  /* Code for Firefox */
+  color: $color--white;
+  background: $color--black;
+}
+
+::selection {
+  color: $color--white;
+  background: $color--black;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  background:$color--grey;
+  font-weight:300;
+  color: $color--grey;
+
+  &.menu-open {
+    overflow: hidden;
+    &:after {
+      transform:translateX(-240px);
+    }
+  }
+
+  #___gatsby {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+h1,
+h2 {
+  font-family: $font;
+  word-spacing: 3px;
+  letter-spacing: 0.15px;
+  font-weight: 100;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font;
+  letter-spacing: 0.15px;
+  font-weight: 100;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 33px;
+  line-height: 38px;
+  @include breakpoint(medium) {
+    font-size:43px;
+    line-height:50px;
+  }
+}
+
+h3 {
+  letter-spacing: 0.3px;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+p,
+ul,
+li,
+ol,
+div,
+table {
+  font-family: $font;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.16px;
+  line-height: 25px;
+}
+blockquote, blockquote p {
+  font-style: italic;
+  font-size: 25px;
+  line-height: 40px;
+  font-family: $font;
+}
+a {
+  color: $color--grey;
+  font-family: $font;
+  text-decoration: none;
+}
+
+.error-404 {
+  text-align: center;
+  padding: 100px 0;
+}
+

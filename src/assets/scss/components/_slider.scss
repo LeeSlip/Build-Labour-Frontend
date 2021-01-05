@@ -1,0 +1,140 @@
+.slider {
+  background: $color--yellow;
+  padding: 100px 0;
+  
+
+  &__inner {
+    position: relative;
+
+    .slider__nav {
+      display: none;
+      height: 0;
+      @include breakpoint (medium) {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .next {
+        background: black;
+        opacity: 0.2;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 30px;
+        height: 60px;
+        img {
+          transform: rotate(270deg);
+          height: 40px;
+          width: auto;
+          margin-bottom: 0;
+        }
+      }
+
+      .previous {
+        background: black;
+        opacity: 0.2;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 30px;
+        height: 60px;
+        img {
+          transform: rotate(90deg);
+          height: 40px;
+          width: auto;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .slick-slider {
+      position: relative;
+      width: 100%;
+      max-width: $content-width;
+      overflow:hidden;
+      margin:24px auto;
+      @include breakpoint (medium) {
+        overflow: visible;
+        max-width: $content-width;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .slick-next {
+        display: none;
+        height: 0;
+        visibility: hidden;
+        z-index: 100;
+        cursor:pointer;
+        @include breakpoint (medium) {
+          display: block;
+          visibility: visible;
+          position: absolute;
+          width: 29px;
+          height: 30px;
+          bottom: -65px;
+          right: calc(50% - 65px);
+        }
+      }
+      .slick-prev {
+        height: 0;
+        display: none;
+        visibility: hidden;
+        z-index: 100;
+        cursor:pointer;
+        @include breakpoint (medium) {
+          display: block;
+          visibility: visible;
+          position: absolute;
+          width: 29px;
+          height: 30px;
+          bottom: -65px;
+          left: calc(50% - 5px);
+        }
+      }
+      .slick-slide {
+        width: 100%;
+        cursor:pointer;
+        transition:all ease-in-out 0.3s;
+        outline: none;
+  
+        a {
+          display: flex;
+          justify-content: center;
+          max-width: 600px;
+          margin: 0 auto;
+          outline: none;
+  
+          img {
+            width: 500px !important;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .slick-active { 
+        width: 100%;
+        
+        a {
+          display: flex !important;
+          justify-content: center;
+          max-width: 600px;
+          margin: 0 auto;
+          outline: none;
+  
+          img {
+            width: 500px !important;
+            outline: none;
+          }
+        }
+      }
+      .slick-track {
+        display: flex;
+        width: 100%;
+        align-items: center;
+      }
+    }
+  }
+}
