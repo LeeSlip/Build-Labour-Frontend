@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `buildlabour.test`,
-        protocol: `http`,
+        baseUrl: `http://ec2-18-218-172-44.us-east-2.compute.amazonaws.com/`,
+        protocol: `https`,
       }
     },
     {
