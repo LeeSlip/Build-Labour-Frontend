@@ -7,21 +7,14 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-layout`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        baseUrl: `ec2-18-218-172-44.us-east-2.compute.amazonaws.com/`,
-        protocol: `http`,
+        baseUrl: `ec2-18-218-172-44.us-east-2.compute.amazonaws.com`,
+        protocol: `https`,
       }
     },
     {
