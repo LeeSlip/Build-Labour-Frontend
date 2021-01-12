@@ -9,7 +9,6 @@ import RenderBlock from '../utils/render-block'
 class PageTemplate extends Component {
   render() {
     let page = this.props.data.wordpressPage
-    console.log(this.props.data);
     return (
       <>
         <SEO title={he.decode(page.yoast_meta.yoast_wpseo_title)} bodyClass={page.slug} description={page.yoast_meta.yoast_wpseo_metadesc} />
