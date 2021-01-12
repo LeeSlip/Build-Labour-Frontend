@@ -5,6 +5,9 @@ const slash = require(`slash`)
 
 const pageQuery = `
   {
+    wordpressWpFrontpage {
+      wordpress_id
+    }
     allWordpressPage {
       edges {
         node {
@@ -24,24 +27,20 @@ exports.createPages = async ({ graphql, actions }) => {
   const pages = await graphql(pageQuery)
 
   pages.data.allWordpressPage.edges.map((edge) => {
-    if (edge.node.slug === 'home') {
-      createPage({
-        path: `/`,
-        component: slash(pageTemplate),
-        context: {
-          id: edge.node.id,
-          slug: edge.node.slug,
-        },
-      })
-    } else if (edge.node.slug !== 'test-page') {
-      createPage({
-        path: `/${edge.node.slug}/`,
-        component: slash(pageTemplate),
-        context: {
-          id: edge.node.id,
-          slug: edge.node.slug,
-        },
-      })
+    let path = `/${edge.node.slug}/`
+    let component = pageTemplate
+    if (edge.node.slug === 'test-page') return
+    if (res.data.wordpressWpFrontpage.wordpress_id === edge.node.wordpress_id) {
+      path = '/'
     }
+
+    createPage({
+      path: path,
+      component: slash(component),
+      context: {
+        id: edge.node.id,
+        slug: edge.node.slug,
+      },
+    })
   })
 } 
