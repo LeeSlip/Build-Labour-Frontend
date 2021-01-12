@@ -3,11 +3,8 @@
 const path = require(`path`)
 const slash = require(`slash`)
 
-const query = `
+const pageQuery = `
   {
-    wordpressWpFrontpage {
-      wordpress_id
-    }
     allWordpressPage {
       edges {
         node {
@@ -24,23 +21,27 @@ const pageTemplate = path.resolve("./src/templates/page.js")
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const pages = await graphql(Query)
+  const pages = await graphql(pageQuery)
 
   pages.data.allWordpressPage.edges.map((edge) => {
-    let path = `/${edge.node.slug}/`
-    let component = pageTemplate
-    if (edge.node.slug === 'test-page') return
-    if (pages.data.wordpressWpFrontpage.wordpress_id === edge.node.wordpress_id) {
-      path = '/'
+    if (edge.node.slug === 'landing') {
+      createPage({
+        path: `/`,
+        component: slash(pageTemplate),
+        context: {
+          id: edge.node.id,
+          slug: edge.node.slug,
+        },
+      })
+    } else if (edge.node.slug !== 'test-page') {
+      createPage({
+        path: `/${edge.node.slug}/`,
+        component: slash(pageTemplate),
+        context: {
+          id: edge.node.id,
+          slug: edge.node.slug,
+        },
+      })
     }
-
-    createPage({
-      path: path,
-      component: slash(component),
-      context: {
-        id: edge.node.id,
-        slug: edge.node.slug,
-      },
-    })
   })
 } 
