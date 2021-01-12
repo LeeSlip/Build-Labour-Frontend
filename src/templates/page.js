@@ -9,6 +9,7 @@ import RenderBlock from '../utils/render-block'
 class PageTemplate extends Component {
   render() {
     let page = this.props.data.wordpressPage
+    console.log(this.props.data);
     return (
       <>
         <SEO title={he.decode(page.yoast_meta.yoast_wpseo_title)} bodyClass={page.slug} description={page.yoast_meta.yoast_wpseo_metadesc} />
@@ -33,15 +34,6 @@ export const pageQuery = graphql`
           content_blocks_page {
             __typename
             ... on WordPressAcf_create_profile_banner {
-              background {
-                localFile {
-                  childImageSharp {
-                    original {
-                      src
-                    }
-                  }
-                }
-              }
               title
               subheading
               repeater {
@@ -184,7 +176,7 @@ export const pageQuery = graphql`
                 content
               }
             }
-            ... on WordPressAcf_accordion {
+            ... on WordPressAcf_accordions {
               background {
                 localFile {
                   childImageSharp {
@@ -200,6 +192,39 @@ export const pageQuery = graphql`
               }
               work {
                 title
+                text
+              }
+            }
+            ... on WordPressAcf_accordion {
+              background {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              question {
+                title
+                text
+              }
+            }
+            ... on WordPressAcf_courses {
+              title
+              courses {
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+              link_button {
+                link
                 text
               }
             }

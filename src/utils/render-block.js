@@ -5,8 +5,11 @@ import TrainingBanner from '../components/training-banner'
 import SliderLink from '../components/slider'
 import CreateProfileBanner from '../components/create-profile-banner'
 import Faq from '../components/faq'
+import Accordions from '../components/accordions'
 import Accordion from '../components/accordion'
 import Features from '../components/features'
+import Courses from '../components/courses'
+import CourseEnquiry from '../components/course-enquiry'
 
 
 const renderBlock = (param, el, i, page = {}) => {
@@ -18,7 +21,11 @@ const renderBlock = (param, el, i, page = {}) => {
     'WordPressAcf_faq': (el, i) => <Faq key={i} {...el} />,
     'WordPressAcf_training_banner': (el, i) => <TrainingBanner key={i} {...el} />,
     'WordPressAcf_accordion': (el, i) => <Accordion key={i} {...el} />,
+    'WordPressAcf_accordions': (el, i) => <Accordions key={i} {...el} />,
     'WordPressAcf_features': (el, i) => <Features key={i} {...el} />,
+    'WordPressAcf_courses': (el, i) => <Courses key={i} {...el} />,
+    'WordPressAcf_course_enquiry': (el, i) => <CourseEnquiry key={i} {...el} />,
+
   }[param]
 
   if (!block) return <div><h1>{param}</h1></div>

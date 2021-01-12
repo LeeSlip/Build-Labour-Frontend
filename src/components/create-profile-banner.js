@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade'
 class CreateProfileBanner extends Component {
 
   render() {
-    let { background, title, subheading, repeater, button } = this.props
+    let { title, subheading, repeater, button } = this.props
 
 
     return (

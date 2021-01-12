@@ -1,0 +1,106 @@
+.course-enquiry {
+
+  &__inner {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 20px;
+    @include breakpoint (medium) {
+      padding: 160px 20px;
+    }
+
+    .title {
+      font-size: 30px;
+      line-height: 34px;
+      font-weight: bold;
+      color: yellow;
+      @include breakpoint (medium) {
+        font-size: 60px;
+        line-height: 64px;
+      }
+    }
+
+    #top {
+      background: $color--blue;
+      color: white;
+      display: flex;
+      margin: 70px auto 40px;
+      width: fit-content;
+
+      &:hover {
+        color: black;
+        background: yellow;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+
+      label {
+        color: white;
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+
+      input, select {
+        height: 50px;
+        padding-left: 12px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+      }
+
+      textarea {
+        padding-left: 12px;
+        padding-top: 12px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+
+      input {
+        margin-bottom: 16px;
+        padding-left: 12px;
+
+        &::placeholder {
+          opacity: 1;
+        }
+      }
+
+      select {
+        margin-bottom: 16px;
+      }
+
+      button {
+        background: $color--blue;
+        border: none;
+        width: fit-content;
+        margin: 30px auto 0;
+        transition: 0.3s ease;
+
+        &:hover {
+          background: yellow;
+
+          p {
+            color: black;
+          }
+        }
+
+
+        p {
+          margin: 0;
+          color: white;
+          font-weight: bold;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}

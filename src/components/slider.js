@@ -19,7 +19,7 @@ class SliderLink extends Component {
     const { activeSlide } = this.state
 
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -38,14 +38,14 @@ class SliderLink extends Component {
               {
                 slides && slides.map((el, i) => {
                   return (
-                    <a href={el.link && el.link ? el.link : ""} key={i}><img src={el.image.localFile.childImageSharp.original.src} /> </a>
+                    <a href={el.link && el.link ? el.link : null} key={i}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" /> </a>
                   )
                 }
                 )}
             </Slider>
             <div className="slider__nav">
-              <a className="previous" href='//' onClick={(e) => this._goToSlide(e, activeSlide - 1)}><img src={arrow} /></a>
-              <a className="next" href='//' onClick={(e) => this._goToSlide(e, activeSlide + 1)}><img src={arrow} /> </a>
+              <a className="previous" href='//' onClick={(e) => this._goToSlide(e, activeSlide - 1)}><img src={arrow} alt="Build Labour" /></a>
+              <a className="next" href='//' onClick={(e) => this._goToSlide(e, activeSlide + 1)}><img src={arrow} alt="Build Labour" /> </a>
             </div>
           </div>
         </div>

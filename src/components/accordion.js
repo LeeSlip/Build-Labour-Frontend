@@ -4,61 +4,29 @@ import Fade from 'react-reveal/Fade'
 class Accordion extends Component {
 
   state = {
-    workerActive: {},
-    workActive: {}
+    questionActive: {},
+
   }
 
-  _toggleWork = (itemId) => {
-    let current = this.state.workActive[itemId]
-    let { workActive } = this.state
-    workActive[itemId] = !current
-    this.setState({ workActive })
+  _toggleQuestion = (itemId) => {
+    let current = this.state.questionActive[itemId]
+    let { questionActive } = this.state
+    questionActive[itemId] = !current
+    this.setState({ questionActive })
   }
 
-  _toggleWorker = (itemId) => {
-    let current = this.state.workerActive[itemId]
-    let { workerActive } = this.state
-    workerActive[itemId] = !current
-    this.setState({ workerActive })
-  }
-
-  _renderWork = (el, i) => {
-    let { workActive } = this.state
+  _renderQuestions = (el, i) => {
+    let { questionActive } = this.state
 
     let props = {
       key: i,
-      className: `accordion__item--work ${workActive[i] ? 'accordion__item--work--active' : ''}`,
+      className: `accordion__item--work ${questionActive[i] ? 'accordion__item--work--active' : ''}`,
       ref: `q_${i}`
     }
 
     return (
       <li {...props}>
-        <button className='title-bar' onClick={e => this._toggleWork(i)}>
-          <p className="title">{el.title}</p>
-          <div className='expander'>
-            <span className='plus'></span>
-            <span className='minus'></span>
-          </div>
-        </button>
-        <div className='inner-content'>
-          <div dangerouslySetInnerHTML={{ __html: el.text }} />
-        </div>
-      </li>
-    )
-  }
-
-  _renderWorker = (el, i) => {
-    let { workerActive } = this.state
-
-    let props = {
-      key: i,
-      className: `accordion__item--worker ${workerActive[i] ? 'accordion__item--worker--active' : ''}`,
-      ref: `q_${i}`
-    }
-
-    return (
-      <li {...props}>
-        <button className='title-bar' onClick={e => this._toggleWorker(i)}>
+        <button className='title-bar' onClick={e => this._toggleQuestion(i)}>
           <p className="title">{el.title}</p>
           <div className='expander'>
             <span className='plus'></span>
@@ -73,31 +41,21 @@ class Accordion extends Component {
   }
 
   render() {
-    let { background, worker, work } = this.props
+    let { background, question } = this.props
 
     return (
       <section className='accordion' style={{ backgroundImage: background.localFile.childImageSharp.original.src }}>
         <div className='accordion__inner'>
           <div className="questions">
             <Fade>
-              <h3>Employer FAQ</h3>
+              <h3>FAQ</h3>
             </Fade>
             <Fade>
               <ul>
-                {worker && worker.map(this._renderWork)}
+                {question && question.map(this._renderQuestions)}
               </ul>
             </Fade>
-          </div>
-          <div className="questions">
-            <Fade>
-              <h3>Worker FAQ</h3>
-            </Fade>
-            <Fade>
-              <ul>
-                {work && work.map(this._renderWorker)}
-              </ul>
-            </Fade>
-          </div>
+          </div>å
         </div>
       </section>
     )

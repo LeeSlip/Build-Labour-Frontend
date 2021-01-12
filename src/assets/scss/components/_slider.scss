@@ -1,5 +1,5 @@
 .slider {
-  background: $color--yellow;
+  background: $color--blue;
   padding: 100px 0;
   
 
@@ -47,6 +47,35 @@
           height: 40px;
           width: auto;
           margin-bottom: 0;
+        }
+      }
+    }
+
+    .slick-dots {
+      display: flex !important;
+      justify-content: space-between;
+      width: 120px;
+      margin: 0 auto;
+      list-style-type: none;
+
+      .slick-active {
+        margin: 0;
+        border-radius: 50%;
+        height: 14px;
+        width: 14px !important;
+        background: yellow;
+      }
+
+      li {
+        border-radius: 50%;
+        height: 14px;
+        width: 14px;
+        background: white;
+
+        button {
+          opacity: 0;
+          height: 14px;
+          width: 14px;
         }
       }
     }

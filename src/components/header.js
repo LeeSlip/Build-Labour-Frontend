@@ -31,8 +31,8 @@ class Header extends Component {
               <a href="/about">About</a>
 
               <div className="socials">
-                <a><img src={insta} /></a>
-                <a><img src={facebook} /></a>
+                <a href="https://www.instagram.com/buildlabour"><img src={insta} /></a>
+                <a href="https://www.facebook.com/buildlabour"><img src={facebook} /></a>
               </div>
             </nav>
             <button className={this.state.menuActive ? 'hamburger active' : 'hamburger'} onClick={this._toggleOffCanvas}>

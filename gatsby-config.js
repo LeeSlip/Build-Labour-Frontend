@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         baseUrl: `ec2-18-218-172-44.us-east-2.compute.amazonaws.com`,
-        protocol: `https`,
+        protocol: `http`,
       }
     },
     {
@@ -22,7 +22,7 @@ module.exports = {
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,
-        start_url: `/`,
+        start_url: `/landing`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
