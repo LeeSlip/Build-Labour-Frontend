@@ -23,7 +23,7 @@ class Header extends Component {
       <>
         <section className="header">
           <div className="header__inner">
-            <a href="/sample-page"><img src={Logo} alt="Build Labour" /></a>
+            <a href="/"><img src={Logo} alt="Build Labour" /></a>
             <nav>
               <a href="/find-work">Find Work</a>
               <a href="/find-workers">Find Workers</a>

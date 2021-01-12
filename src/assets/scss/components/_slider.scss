@@ -127,8 +127,9 @@
       .slick-slide {
         width: 100%;
         cursor:pointer;
-        transition:all ease-in-out 0.3s;
+        transition:all ease-in 0.3s;
         outline: none;
+        visibility: hidden;
   
         a {
           display: flex;
@@ -145,6 +146,7 @@
       }
       .slick-active { 
         width: 100%;
+        visibility: visible;
         
         a {
           display: flex !important;

@@ -164,6 +164,7 @@
       cursor:pointer;
       transition:all ease-in-out 0.3s;
       outline: none;
+      visibility: hidden;
 
       div {
         display: flex;
@@ -175,6 +176,7 @@
       }
     }
     .slick-active { 
+      visibility: visible;
       
       div {
         display: flex;
