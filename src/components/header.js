@@ -8,6 +8,33 @@ class Header extends Component {
 
   state = {
     menuActive: false,
+    scrolled: false,
+    lastScrollTop: 0,
+    visible: false,
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  // Hide or show the menu.
+  handleScroll = () => {
+    const currentScrollPos = window.pageYOffset
+    const visible = this.prevScrollPos < currentScrollPos;
+    this.prevScrollPos = currentScrollPos
+    this.setState({ visible })
+
+
+    const dist = 100 // distance from top to start hiding
+    let st = window.pageYOffset || window.scrollY
+    this.setState({
+      scrolled: window.scrollY > window.innerHeight,
+      lastScrollTop: st <= dist ? dist : st,
+    })
   }
 
 

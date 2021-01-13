@@ -5,7 +5,6 @@
   background-image: url('../../assets/images/mainbanner.jpg');
   background-repeat: no-repeat;
   @include breakpoint (medium) {
-    background-size: cover;
   }
 
   &__inner {
