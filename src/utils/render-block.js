@@ -10,6 +10,7 @@ import Accordion from '../components/accordion'
 import Features from '../components/features'
 import Courses from '../components/courses'
 import CourseEnquiry from '../components/course-enquiry'
+import Content from '../components/content'
 
 
 const renderBlock = (param, el, i, page = {}) => {
@@ -25,6 +26,7 @@ const renderBlock = (param, el, i, page = {}) => {
     'WordPressAcf_features': (el, i) => <Features key={i} {...el} />,
     'WordPressAcf_courses': (el, i) => <Courses key={i} {...el} />,
     'WordPressAcf_course_enquiry': (el, i) => <CourseEnquiry key={i} {...el} />,
+    'WordPressAcf_content': (el, i) => <Content key={i} {...el} />,
 
   }[param]
 

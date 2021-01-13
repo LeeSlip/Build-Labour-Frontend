@@ -12,15 +12,15 @@ class PageBanner extends Component {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 6,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       responsive: [
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
           }
         },
@@ -55,9 +55,7 @@ class PageBanner extends Component {
             {
               slides && slides.map((el, i) => {
                 return (
-                  <Fade bottom>
-                    <img src={el.image.localFile.childImageSharp.original.src} key={i} alt={el.alt_text} />
-                  </Fade>
+                  <img src={el.image.localFile.childImageSharp.original.src} key={i} alt={el.alt_text} />
                 )
               })
             }

@@ -1,0 +1,21 @@
+.content {
+
+  &__inner {
+    max-width: $content-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    @include breakpoint (medium) {
+      padding: 120px 20px;
+    }
+
+    div {
+      color: white;
+      font-weight: bold;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

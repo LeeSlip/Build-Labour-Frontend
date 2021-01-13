@@ -130,6 +130,9 @@
         transition:all ease-in 0.3s;
         outline: none;
         visibility: hidden;
+        @include breakpoint (medium) {
+          visibility: visible;
+        }
   
         a {
           display: flex;

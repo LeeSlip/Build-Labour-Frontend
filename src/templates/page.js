@@ -209,6 +209,10 @@ export const pageQuery = graphql`
                 text
               }
             }
+            ... on WordPressAcf_content {
+              bgcolour
+              text
+            }
             ... on WordPressAcf_courses {
               title
               courses {

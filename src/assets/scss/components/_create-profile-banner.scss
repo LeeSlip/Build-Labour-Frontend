@@ -44,9 +44,10 @@
     .arrow {
       height: auto;
       margin: 0 auto 20px;
-      width: 50px;
+      width: 30px;
       @include breakpoint (medium) {
-        width: 80px;
+        width: 40px;
+        margin-bottom: 40px;
       }
     }
 

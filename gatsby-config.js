@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Build Labour`,
-    description: `.`,
+    description: `Connecting construction workers and construction businesses`,
     author: `@gatsbyjs`,
   },
   plugins: [
