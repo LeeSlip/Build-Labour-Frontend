@@ -17,24 +17,22 @@ class Header extends Component {
     window.addEventListener("scroll", this.handleScroll);
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
+  // componentWillUnmount() {
+  //   window.removeEventListener("scroll", this.handleScroll);
+  // }
 
   // Hide or show the menu.
   handleScroll = () => {
-    const currentScrollPos = window.pageYOffset
-    const visible = this.prevScrollPos < currentScrollPos;
-    this.prevScrollPos = currentScrollPos
-    this.setState({ visible })
-
-
-    const dist = 100 // distance from top to start hiding
-    let st = window.pageYOffset || window.scrollY
-    this.setState({
-      scrolled: window.scrollY > window.innerHeight,
-      lastScrollTop: st <= dist ? dist : st,
-    })
+    const currentScrollPos = window.pageYOffset;
+    console.log("current position: " + currentScrollPos)
+    console.log(this.state.lastScrollTop);
+    // const visible = this.lastScrollTop < currentScrollPos;
+    // this.prevScrollPos = currentScrollPos;
+    if (currentScrollPos > 300) {
+      document.querySelector('.header').classList.add('header--scrolled')
+    } if (currentScrollPos < 300) {
+      document.querySelector('.header').classList.remove('header--scrolled')
+    }
   }
 
 
@@ -50,7 +48,7 @@ class Header extends Component {
       <>
         <section className="header">
           <div className="header__inner">
-            <a href="/"><img src={Logo} alt="Build Labour" /></a>
+            <a className="logo" href="/"><img src={Logo} alt="Build Labour" /></a>
             <nav>
               <a href="/find-work">Find Work</a>
               <a href="/find-workers">Find Workers</a>
@@ -67,6 +65,7 @@ class Header extends Component {
             </button>
           </div>
         </section>
+        <div className="header-padding" />
 
         <div className={`off-canvas ${this.state.menuActive ? 'active' : ''}`}>
           <nav className='off-canvas__nav'>

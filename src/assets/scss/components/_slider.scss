@@ -1,6 +1,6 @@
 .slider {
   background: $color--blue;
-  padding: 100px 0;
+  padding: 80px 0;
   
 
   &__inner {
@@ -12,8 +12,8 @@
       @include breakpoint (medium) {
         position: absolute;
         top: 50%;
-        left: 25%;
-        width: 50%;
+        left: 7.5%;
+        width: 85%;
         display: flex;
         justify-content: space-between;
       }
@@ -137,12 +137,12 @@
         a {
           display: flex;
           justify-content: center;
-          max-width: 600px;
+          max-width: 850px;
           margin: 0 auto;
           outline: none;
   
           img {
-            width: 500px !important;
+            width: 850px !important;
             margin-bottom: 0;
           }
         }
@@ -154,12 +154,12 @@
         a {
           display: flex !important;
           justify-content: center;
-          max-width: 600px;
+          max-width: 850px;
           margin: 0 auto;
           outline: none;
   
           img {
-            width: 500px !important;
+            width: 1000px !important;
             outline: none;
             height: 100%;
           }

@@ -34,6 +34,10 @@
       h3 {
         font-weight: bold;
         color: yellow;
+        @include breakpoint (medium) {
+          font-size: 60px;
+          line-height: 60px;
+        }
       }
 
       ul {
@@ -97,7 +101,7 @@
       .title {
         font-size: 15px;
         @include breakpoint (medium) {
-          font-size: 18px;
+          font-size: 24px;
         }
       }
 
@@ -160,6 +164,9 @@
         opacity: 1;
         color: white;
         border-top: 1px solid white;
+        @include breakpoint (medium) {
+          font-size: 22px;
+        }
       }
     }
   }
