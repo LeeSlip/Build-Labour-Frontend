@@ -24,10 +24,8 @@ class Header extends Component {
   // Hide or show the menu.
   handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    console.log("current position: " + currentScrollPos)
-    console.log(this.state.lastScrollTop);
-    // const visible = this.lastScrollTop < currentScrollPos;
-    // this.prevScrollPos = currentScrollPos;
+    // console.log("current position: " + currentScrollPos)
+    // console.log(this.state.lastScrollTop);
     if (currentScrollPos > 300) {
       document.querySelector('.header').classList.add('header--scrolled')
     } if (currentScrollPos < 300) {
