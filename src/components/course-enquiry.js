@@ -9,13 +9,23 @@ function encode(data) {
 class CourseEnquiry extends Component {
 
   state = {
-    form: {
-    }
+    form: {}
   }
 
   handleChange = e => {
     let { form } = this.state
-    form[e.target.name] = e.target.value
+    if (e.target.name === 'type') {
+      let current = form[e.target.name] || ''
+      if (current.indexOf(e.target.value) === -1) {
+        // add
+        form[e.target.name] = current + ' ' + e.target.value
+      } else {
+        // remove
+        form[e.target.name] = current.replace(' ' + e.target.value, '')
+      }
+    } else {
+      form[e.target.name] = e.target.value
+    }
     this.setState({ form })
   }
 
@@ -49,7 +59,7 @@ class CourseEnquiry extends Component {
       return (
         <section className='contact-body' data-color='#FFF'>
           <div className='course-enquiry__inner'>
-            <p>Thanks for getting in contact with us.<br /> A member of our team will be in touch soon.</p>
+            <p className="success">Thanks for getting in contact with us.<br /> A member of our team will be in touch soon.</p>
           </div>
         </section>
       )
