@@ -29,15 +29,15 @@ class CourseEnquiry extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    let form = document.querySelector(".contact");
+    let form = document.querySelector(".subscribe-form");
 
-    if (!form.checkValidity()) return false
+    if (!this.refs.form.checkValidity()) return false
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': form.getAttribute('name'),
+        'form-name': this.refs.form.getAttribute('name'),
         ...this.state.form
       })
     })
@@ -47,6 +47,7 @@ class CourseEnquiry extends Component {
 
   render() {
     let formProps = {
+      ref: 'form',
       name: 'submission',
       className: 'subscribe-form',
       onSubmit: this.handleSubmit,
