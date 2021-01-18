@@ -6,11 +6,7 @@
     margin: 0 auto;
     padding: 40px 20px;
     @include breakpoint (medium) {
-      padding: 40px 40px;
       font-weight: bold;
-    }
-    @include breakpoint (large) {
-      padding: 40px 20px;
     }
 
     a {
