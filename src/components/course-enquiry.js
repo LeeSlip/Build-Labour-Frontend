@@ -16,6 +16,7 @@ class CourseEnquiry extends Component {
     let { form } = this.state
     if (e.target.name === 'type') {
       let current = form[e.target.name] || ''
+      console.log(current)
       if (current.indexOf(e.target.value) === -1) {
         // add
         form[e.target.name] = current + ' ' + e.target.value
@@ -27,6 +28,7 @@ class CourseEnquiry extends Component {
       form[e.target.name] = e.target.value
     }
     this.setState({ form })
+    console.log(this.state.form);
   }
 
   handleSubmit = e => {
@@ -73,9 +75,9 @@ class CourseEnquiry extends Component {
             <a id="top" className="btn" href="/education-courses">View Courses</a>
             <form {...formProps}>
               <label>What is your name?</label>
-              <input className='form-name' type='name' name='name' placeholder='Name' onChange={this._handleChange} required />
+              <input className='form-name' type='name' name='name' placeholder='Name' onChange={this.handleChange} required />
               <label>What is your email?</label>
-              <input className='form-name' type='email' name='email' placeholder='Email' onChange={this._handleChange} required />
+              <input className='form-name' type='email' name='email' placeholder='Email' onChange={this.handleChange} required />
               <label>What is your current level of education?</label>
               <select className='form-name' id="education" name="education">
                 <option value="Finished Year 10">Finished year 10</option>
@@ -90,7 +92,7 @@ class CourseEnquiry extends Component {
                 <option value="Finished a Post Grad Qualification">Finished a Post Grad Qualification</option>
               </select>
               <label >Which qualification are you interested in?</label>
-              <select className='form-name' type='qualification' name='qualification' onChange={this._handleChange} required>
+              <select className='form-name' type='qualification' name='qualification' onChange={this.handleChange} required>
                 <option value="Certificate III in Carpentry (CPC30211)">Certificate III in Carpentry (CPC30211)</option>
                 <option value="Certificate III in Civil Contruction Plant Operations">Certificate III in Civil Contruction Plant Operations</option>
                 <option value="Certificate IV in Building and Construction (Building) (CPC40110)">Certificate IV in Building and Construction (Building) (CPC40110)</option>
@@ -98,7 +100,7 @@ class CourseEnquiry extends Component {
                 <option value="Diploma of Building and Construction (Building) (CPC50210)">Diploma of Building and Construction (Building) (CPC50210)</option>
               </select>
               <label>When are you looking to study?</label>
-              <select className='form-name' type='time' name='time' onChange={this._handleChange} required>
+              <select className='form-name' type='time' name='time' onChange={this.handleChange} required>
                 <option value="ASAP">As soon as possible</option>
                 <option value="Next 3 months">Next 3 months</option>
                 <option value="Next 6 months">Next 6 months</option>
@@ -106,11 +108,11 @@ class CourseEnquiry extends Component {
                 <option value="A year or more away">A year or more away</option>
               </select>
               <label>What is your motivation to study?</label>
-              <textarea className='form-name' rows="4" type='motivation' name='motivation' placeholder='Motivation to study' onChange={this._handleChange} required />
+              <textarea className='form-name' rows="4" type='motivation' name='motivation' placeholder='Motivation to study' onChange={this.handleChange} required />
               <label>What state do you live in?</label>
-              <input className='form-name' type='state' name='state' placeholder='State' onChange={this._handleChange} required />
+              <input className='form-name' type='state' name='state' placeholder='State' onChange={this.handleChange} required />
               <label>What suburb do you live in?</label>
-              <input className='form-name' type='suburb' name='suburb' placeholder='Suburb' onChange={this._handleChange} required />
+              <input className='form-name' type='suburb' name='suburb' placeholder='Suburb' onChange={this.handleChange} required />
               <input type="hidden" name="form-name" value="contact-form" />
               <button className="btn" type='submit'><p>Submit</p></button>
             </form>
