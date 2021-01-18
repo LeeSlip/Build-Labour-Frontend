@@ -28,7 +28,6 @@ class CourseEnquiry extends Component {
       form[e.target.name] = e.target.value
     }
     this.setState({ form })
-    console.log(this.state.form);
   }
 
   handleSubmit = e => {
