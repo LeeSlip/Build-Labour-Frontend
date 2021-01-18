@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         baseUrl: `ec2-18-218-172-44.us-east-2.compute.amazonaws.com`,
-        protocol: `https`,
+        protocol: `http`,
       }
     },
     {
