@@ -21,20 +21,18 @@ class CourseEnquiry extends Component {
 
   handleSubmit = e => {
     e.preventDefault()
-    let form = document.querySelector(".subscribe-form");
-
     if (!this.refs.form.checkValidity()) return false
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        'form-name': this.refs.form.getAttribute('name'),
+        "form-name": this.refs.form.getAttribute("name"),
         ...this.state.form
       })
     })
       .then(() => this.setState({ result: 'success' }))
-      .catch(error => this.setState({ result: 'fail', msg: error }));
+      .catch(error => this.setState({ result: 'fail', msg: error }))
   }
 
   render() {
@@ -45,6 +43,16 @@ class CourseEnquiry extends Component {
       onSubmit: this.handleSubmit,
       'data-netlify': 'true',
       'data-netlify-honeypot': 'bot-field',
+    }
+
+    if (this.state.result === 'success') {
+      return (
+        <section className='contact-body' data-color='#FFF'>
+          <div className='course-enquiry__inner'>
+            <p>Thanks for getting in contact with us.<br /> A member of our team will be in touch soon.</p>
+          </div>
+        </section>
+      )
     }
 
     return (
