@@ -29,7 +29,7 @@ class MainBanner extends Component {
               {
                 socials && socials.map((el, i) => (
                   <Fade bottom>
-                    <a className="social" key={i} href={el.link}><img src={el.image.localFile.childImageSharp.original.src} /></a>
+                    <a className="social" key={i} href={'https://' + el.link}><img src={el.image.localFile.childImageSharp.original.src} /></a>
                   </Fade>
                 ))
               }

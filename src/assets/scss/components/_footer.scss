@@ -1,3 +1,26 @@
-.class .footer {
+.footer {
+
+  &__inner {
+    max-width: $content-width;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    @include breakpoint (medium) {
+      padding: 40px 40px;
+      font-weight: bold;
+    }
+    @include breakpoint (large) {
+      padding: 40px 20px;
+    }
+
+    a {
+      color: white;
+      margin-bottom: 0;
+      margin-right: 12px;
+    }
+  }
+}
+
+.landing .footer {
   display: none;
 }
