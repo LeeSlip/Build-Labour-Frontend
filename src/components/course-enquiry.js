@@ -48,7 +48,7 @@ class CourseEnquiry extends Component {
   render() {
     let formProps = {
       name: 'submission',
-      className: 'contact',
+      className: 'subscribe-form',
       onSubmit: this.handleSubmit,
       'data-netlify': 'true',
       'data-netlify-honeypot': 'bot-field',
