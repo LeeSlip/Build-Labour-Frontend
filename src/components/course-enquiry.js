@@ -10,14 +10,6 @@ class CourseEnquiry extends Component {
 
   state = {
     form: {
-      name: '',
-      email: '',
-      education: '',
-      qualification: '',
-      time: '',
-      motivation: '',
-      state: '',
-      suburb: '',
     }
   }
 
