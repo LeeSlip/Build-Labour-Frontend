@@ -79,7 +79,7 @@ class CourseEnquiry extends Component {
               <label>What is your email?</label>
               <input className='form-name' type='email' name='email' placeholder='Email' onChange={this.handleChange} required />
               <label>What is your current level of education?</label>
-              <select className='form-name' id="education" name="education">
+              <select className='form-name' id="education" name="education" onChange={this.handleChange} required>
                 <option value="Finished Year 10">Finished year 10</option>
                 <option value="Finished Year 11">Finished year 11</option>
                 <option value="Finished Year 12">Finished year 12</option>
