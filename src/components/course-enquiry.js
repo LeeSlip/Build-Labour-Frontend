@@ -17,7 +17,7 @@ class CourseEnquiry extends Component {
     if (e.target.name === 'type') {
       let current = form[e.target.name] || ''
 
-      if (current.indexOf(e.target.value) != "Select an option") {
+      if (current.indexOf(e.target.value) !== "Select an option") {
         // add
         form[e.target.name] = current + ' ' + e.target.value
       } else {
