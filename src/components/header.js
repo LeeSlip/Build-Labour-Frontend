@@ -30,9 +30,9 @@ class Header extends Component {
     const currentScrollPos = window.pageYOffset;
     // console.log("current position: " + currentScrollPos)
     // console.log(this.state.lastScrollTop);
-    if (currentScrollPos > 300) {
+    if (currentScrollPos > 150) {
       document.querySelector('.header').classList.add('header--scrolled')
-    } if (currentScrollPos < 300) {
+    } if (currentScrollPos < 150) {
       document.querySelector('.header').classList.remove('header--scrolled')
     }
   }
