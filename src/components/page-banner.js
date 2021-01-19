@@ -12,10 +12,10 @@ class PageBanner extends Component {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 6,
+      slidesToShow: 5,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: false,
+      autoplay: true,
       responsive: [
         {
           breakpoint: 800,
@@ -27,10 +27,9 @@ class PageBanner extends Component {
       ]
     };
 
-
     return (
       <>
-        <section className="page-banner" style={{ backgroundImage: background.localFile.childImageSharp.original.src }}>
+        <section className="page-banner" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
           <div className="page-banner__inner">
             <div className="title-content">
               <Fade>
@@ -49,7 +48,7 @@ class PageBanner extends Component {
                 }
               </div>
             </div>
-            <img src={image.localFile.childImageSharp.original.src} />
+            <img src={image.localFile.childImageSharp.original.src} alt="Build Labour" />
           </div>
           <Slider {...settings}>
             {

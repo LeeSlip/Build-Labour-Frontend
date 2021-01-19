@@ -100,7 +100,7 @@
       .title {
         font-size: 15px;
         @include breakpoint (medium) {
-          font-size: 24px;
+          font-size: 20px;
         }
       }
 
@@ -141,7 +141,7 @@
 
       div {
         @include breakpoint (medium) {
-          font-size: 22px;
+          font-size: 18px;
         }
       }
     }

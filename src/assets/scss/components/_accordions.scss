@@ -101,7 +101,7 @@
       .title {
         font-size: 15px;
         @include breakpoint (medium) {
-          font-size: 24px;
+          font-size: 20px;
         }
       }
 
@@ -165,7 +165,7 @@
         color: white;
         border-top: 1px solid white;
         @include breakpoint (medium) {
-          font-size: 22px;
+          font-size: 18px;
         }
       }
     }

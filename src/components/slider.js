@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick'
 import arrow from '../assets/images/arrow.svg'
-import Fade from 'react-reveal'
 
 class SliderLink extends Component {
   state = {

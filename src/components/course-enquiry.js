@@ -79,6 +79,7 @@ class CourseEnquiry extends Component {
               <input className='form-name' type='email' name='email' placeholder='Email' onChange={this.handleChange} required />
               <label>What is your current level of education?</label>
               <select className='form-name' id="education" name="education" onChange={this.handleChange} required>
+                <option value='1'>Select an option</option>
                 <option value="Finished Year 10">Finished year 10</option>
                 <option value="Finished Year 11">Finished year 11</option>
                 <option value="Finished Year 12">Finished year 12</option>
@@ -92,6 +93,7 @@ class CourseEnquiry extends Component {
               </select>
               <label >Which qualification are you interested in?</label>
               <select className='form-name' type='qualification' name='qualification' onChange={this.handleChange} required>
+                <option value='1'>Select an option</option>
                 <option value="Certificate III in Carpentry (CPC30211)">Certificate III in Carpentry (CPC30211)</option>
                 <option value="Certificate III in Civil Contruction Plant Operations">Certificate III in Civil Contruction Plant Operations</option>
                 <option value="Certificate IV in Building and Construction (Building) (CPC40110)">Certificate IV in Building and Construction (Building) (CPC40110)</option>
@@ -100,6 +102,7 @@ class CourseEnquiry extends Component {
               </select>
               <label>When are you looking to study?</label>
               <select className='form-name' type='time' name='time' onChange={this.handleChange} required>
+                <option value='1'>Select an option</option>
                 <option value="ASAP">As soon as possible</option>
                 <option value="Next 3 months">Next 3 months</option>
                 <option value="Next 6 months">Next 6 months</option>
@@ -109,7 +112,17 @@ class CourseEnquiry extends Component {
               <label>What is your motivation to study?</label>
               <textarea className='form-name' rows="4" type='motivation' name='motivation' placeholder='Motivation to study' onChange={this.handleChange} required />
               <label>What state do you live in?</label>
-              <input className='form-name' type='state' name='state' placeholder='State' onChange={this.handleChange} required />
+              <select className='form-name' type='state' name='state' onChange={this.handleChange} required>
+                <option value='1'>Select an option</option>
+                <option value="Victoria">Victoria</option>
+                <option value="New South Wales">New South Wales</option>
+                <option value="Queensland">Queensland</option>
+                <option value="Western Australia">Western Australia</option>
+                <option value="NT">Northern Territory</option>
+                <option value="ACT">Australian Capital Territory</option>
+                <option value="Tasmania">Tasmania</option>
+              </select>
+              {/* <input className='form-name' type='state' name='state' placeholder='State' onChange={this.handleChange} required /> */}
               <label>What suburb do you live in?</label>
               <input className='form-name' type='suburb' name='suburb' placeholder='Suburb' onChange={this.handleChange} required />
               <input type="hidden" name="form-name" value="contact-form" />
