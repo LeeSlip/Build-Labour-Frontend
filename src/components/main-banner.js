@@ -5,12 +5,12 @@ class MainBanner extends Component {
 
 
   render() {
-    let { logo, background, title, buttons, socials } = this.props;
+    let { logo, title, buttons, socials } = this.props;
 
 
     return (
       <>
-        <section className="main-banner" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
+        <section className="main-banner">
           <div className="main-banner__inner">
             <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
             <Fade bottom>
