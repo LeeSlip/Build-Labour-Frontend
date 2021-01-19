@@ -17,6 +17,10 @@ class Header extends Component {
     window.addEventListener("scroll", this.handleScroll);
   }
 
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
+
   // componentWillUnmount() {
   //   window.removeEventListener("scroll", this.handleScroll);
   // }
@@ -48,10 +52,10 @@ class Header extends Component {
           <div className="header__inner">
             <a className="logo" href="/"><img src={Logo} alt="Build Labour" /></a>
             <nav>
-              <a href="/find-work">Find Work</a>
-              <a href="/find-workers">Find Workers</a>
-              <a href="/find-training">Find Training</a>
-              <a href="/about">About</a>
+              <a onClick={this.scrollTop} href="/find-work">Find Work</a>
+              <a onClick={this.scrollTop} href="/find-workers">Find Workers</a>
+              <a onClick={this.scrollTop} href="/find-training">Find Training</a>
+              <a onClick={this.scrollTop} href="/about">About</a>
 
               <div className="socials">
                 <a href="https://www.instagram.com/buildlabour" target='_blank' rel='nofollow noopener noreferrer'><img src={insta} alt="Build Labour Instagram" /></a>
@@ -67,10 +71,10 @@ class Header extends Component {
 
         <div className={`off-canvas ${this.state.menuActive ? 'active' : ''}`}>
           <nav className='off-canvas__nav'>
-            <a href="/find-work">Find Work</a>
-            <a href="/find-workers">Find Workers</a>
-            <a href="/find-training">Find Training</a>
-            <a href="/about">About</a>
+            <a onClick={this.scrollTop} href="/find-work">Find Work</a>
+            <a onClick={this.scrollTop} href="/find-workers">Find Workers</a>
+            <a onClick={this.scrollTop} href="/find-training">Find Training</a>
+            <a onClick={this.scrollTop} href="/about">About</a>
           </nav>
         </div>
       </>

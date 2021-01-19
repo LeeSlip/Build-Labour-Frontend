@@ -7,6 +7,11 @@ import SEO from '../components/seo'
 import RenderBlock from '../utils/render-block'
 
 class PageTemplate extends Component {
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     let page = this.props.data.wordpressPage
     return (
