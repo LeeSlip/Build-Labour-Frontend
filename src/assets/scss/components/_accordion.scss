@@ -10,6 +10,7 @@
   z-index: 0;
   background-position-y: center;
   @include breakpoint (medium) {
+    height: 100%;
   }
 
   .tint {
