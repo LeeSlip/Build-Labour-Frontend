@@ -14,7 +14,7 @@ class SliderLink extends Component {
   }
 
   render() {
-    const { slides, slides_mobile } = this.props;
+    const { slides } = this.props;
     const { activeSlide } = this.state
 
     const settings = {
@@ -24,7 +24,7 @@ class SliderLink extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: true,
+      autoplay: false,
       beforeChange: (current, next) => this.setState({ activeSlide: next }),
     };
 
@@ -42,15 +42,6 @@ class SliderLink extends Component {
                 }
                 )}
             </Slider>
-            {/* <Slider className="slider-mobile" ref={slider => (this.slider = slider)} {...settings}>
-              {
-                slides_mobile && slides_mobile.map((el, i) => {
-                  return (
-                    <a href={el.link && el.link ? el.link : null} key={i}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" /> </a>
-                  )
-                }
-                )}
-            </Slider> */}
             <div className="slider__nav">
               <a className="previous" href='//' onClick={(e) => this._goToSlide(e, activeSlide - 1)}><img src={arrow} alt="Build Labour" /></a>
               <a className="next" href='//' onClick={(e) => this._goToSlide(e, activeSlide + 1)}><img src={arrow} alt="Build Labour" /> </a>
