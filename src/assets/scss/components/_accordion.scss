@@ -15,14 +15,14 @@
     background-position: center ;
     background-attachment: scroll;
     z-index: -1;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     @include breakpoint (medium) {
       background-attachment: fixed;
       height: 100%;
-      position: absolute;
-      height: 100%;
       width: 100vw;
       z-index: 0;
-      background-size: cover;
       background-repeat: no-repeat;
       background-position: inherit;
     }
