@@ -1,12 +1,12 @@
 .accordion {
   position: relative;
-  height: 100%;
+  height: auto;
   width: 100vw;
   background-image: url('../../assets/images/mainbanner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: inherit;
-  background-attachment: fixed;
+  background-attachment:scroll;
   z-index: 0;
   background-position-y: center;
   -webkit-background-size: cover;
