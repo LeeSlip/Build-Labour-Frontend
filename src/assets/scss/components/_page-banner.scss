@@ -27,7 +27,7 @@
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
-    z-index: -1;
+    z-index: -2;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -49,7 +49,7 @@
     background: $color--blue;
     opacity: 0.8;
     mix-blend-mode: multiply;
-    z-index: -2;
+    z-index: -1;
     
   }
 
