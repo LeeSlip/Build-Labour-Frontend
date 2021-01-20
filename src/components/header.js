@@ -28,14 +28,14 @@ class Header extends Component {
 
   // Hide or show the menu.
   handleScroll = () => {
-    //const currentScrollPos = window.pageYOffset;
-    // console.log("current position: " + currentScrollPos)
-    // console.log(this.state.lastScrollTop);
-    // if (currentScrollPos > 150) {
-    //   document.querySelector('.header').classList.add('header--scrolled')
-    // } if (currentScrollPos < 150) {
-    //   document.querySelector('.header').classList.remove('header--scrolled')
-    // }
+    const currentScrollPos = window.pageYOffset;
+    console.log("current position: " + currentScrollPos)
+    console.log(this.state.lastScrollTop);
+    if (currentScrollPos > 150) {
+      document.querySelector('.header').classList.add('header--scrolled')
+    } if (currentScrollPos < 150) {
+      document.querySelector('.header').classList.remove('header--scrolled')
+    }
   }
 
 
