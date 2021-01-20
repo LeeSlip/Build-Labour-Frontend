@@ -11,13 +11,6 @@ module.exports = {
     `gatsby-plugin-layout`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        baseUrl: `ec2-18-218-172-44.us-east-2.compute.amazonaws.com`,
-        protocol: `http`,
-      }
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-147131520",
@@ -30,6 +23,13 @@ module.exports = {
         // Avoids sending pageview hits from custom paths
         exclude: [],
       },
+    },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        baseUrl: `ec2-18-218-172-44.us-east-2.compute.amazonaws.com`,
+        protocol: `http`,
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,

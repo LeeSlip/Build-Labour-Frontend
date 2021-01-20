@@ -14,7 +14,7 @@ class SliderLink extends Component {
   }
 
   render() {
-    const { slides } = this.props;
+    const { slides, slides_mobile } = this.props;
     const { activeSlide } = this.state
 
     const settings = {
@@ -24,7 +24,7 @@ class SliderLink extends Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      autoplay: false,
+      autoplay: true,
       beforeChange: (current, next) => this.setState({ activeSlide: next }),
     };
 
@@ -33,9 +33,18 @@ class SliderLink extends Component {
       <>
         <div className="slider">
           <div className="slider__inner">
-            <Slider ref={slider => (this.slider = slider)} {...settings}>
+            <Slider className="slider-desktop" ref={slider => (this.slider = slider)} {...settings}>
               {
                 slides && slides.map((el, i) => {
+                  return (
+                    <a href={el.link && el.link ? el.link : null} key={i}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" /> </a>
+                  )
+                }
+                )}
+            </Slider>
+            <Slider className="slider-mobile" ref={slider => (this.slider = slider)} {...settings}>
+              {
+                slides_mobile && slides_mobile.map((el, i) => {
                   return (
                     <a href={el.link && el.link ? el.link : null} key={i}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" /> </a>
                   )

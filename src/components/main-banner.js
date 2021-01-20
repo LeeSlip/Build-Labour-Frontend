@@ -3,6 +3,10 @@ import Fade from 'react-reveal/Fade'
 
 class MainBanner extends Component {
 
+  scrollTop() {
+    window.scrollTo(0, 0);
+  }
+
 
   render() {
     let { logo, title, buttons, socials } = this.props;
@@ -20,7 +24,7 @@ class MainBanner extends Component {
               <div className="buttons">
                 {
                   buttons && buttons.map((el, i) => (
-                    <a className="btn" key={i} href={el.link}>{el.text}</a>
+                    <a className="btn" onClick={this.scrollTop} key={i} href={el.link}>{el.text}</a>
                   ))
                 }
               </div>
