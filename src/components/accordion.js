@@ -44,8 +44,10 @@ class Accordion extends Component {
     let { background, question } = this.props
 
     return (
-      <section className='accordion' style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
-        <div className="tint" />
+      <section className='accordion'>
+        <div className="background" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
+          <div className="tint" />
+        </div>
         <div className='accordion__inner'>
           <div className="questions">
             <Fade>
