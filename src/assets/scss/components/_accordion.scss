@@ -4,8 +4,24 @@
   width: 100vw;
   background-image: url('../../assets/images/mainbanner.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: inherit;
+  background-attachment: fixed;
+  z-index: 0;
+  background-position-y: center;
   @include breakpoint (medium) {
   }
+
+  .tint {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background: $color--yellow;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+    z-index: 0;
+  }
+
 
   &__inner {
     width: 100%;
