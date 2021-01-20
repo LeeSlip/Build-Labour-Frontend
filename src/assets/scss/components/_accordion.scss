@@ -35,6 +35,7 @@
     // left: 0; 
     @include breakpoint (medium) {
       background-attachment: fixed;
+      height: unset;
     }
   }
 
