@@ -3,16 +3,6 @@
   height: auto;
   width: 100vw;
   overflow: hidden;
-  // background-image: url('../../assets/images/mainbanner.jpg');
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: inherit;
-  // background-attachment:fixed;
-  // z-index: 0;
-  // background-position-y: center;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
   @include breakpoint (medium) {
     height: 100%;
   }
@@ -24,18 +14,17 @@
     background-size: cover;
     background-position: center ;
     background-attachment: scroll;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     z-index: -1;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    // top: 0; 
-    // left: 0; 
     @include breakpoint (medium) {
       background-attachment: fixed;
       height: 100%;
+      position: absolute;
+      height: 100%;
+      width: 100vw;
+      z-index: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: inherit;
     }
   }
 
