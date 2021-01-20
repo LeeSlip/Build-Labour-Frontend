@@ -5,11 +5,11 @@
   background-image: url('../../assets/images/mainbanner.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: inherit;
+  background-attachment: fixed;
   z-index: 0;
   background-position-y: center;
   @include breakpoint (medium) {
-    background-position: inherit;
-    background-attachment: fixed;
   }
 
   .tint {
