@@ -15,6 +15,7 @@ class Header extends Component {
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.scrollTo(0, 0);
   }
 
   scrollTop() {
