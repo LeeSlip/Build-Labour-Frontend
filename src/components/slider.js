@@ -33,7 +33,7 @@ class SliderLink extends Component {
       <>
         <div className="slider">
           <div className="slider__inner">
-            <Slider className="slider-desktop" ref={slider => (this.slider = slider)} {...settings}>
+            <Slider ref={slider => (this.slider = slider)} {...settings}>
               {
                 slides && slides.map((el, i) => {
                   return (
@@ -42,7 +42,7 @@ class SliderLink extends Component {
                 }
                 )}
             </Slider>
-            <Slider className="slider-mobile" ref={slider => (this.slider = slider)} {...settings}>
+            {/* <Slider className="slider-mobile" ref={slider => (this.slider = slider)} {...settings}>
               {
                 slides_mobile && slides_mobile.map((el, i) => {
                   return (
@@ -50,7 +50,7 @@ class SliderLink extends Component {
                   )
                 }
                 )}
-            </Slider>
+            </Slider> */}
             <div className="slider__nav">
               <a className="previous" href='//' onClick={(e) => this._goToSlide(e, activeSlide - 1)}><img src={arrow} alt="Build Labour" /></a>
               <a className="next" href='//' onClick={(e) => this._goToSlide(e, activeSlide + 1)}><img src={arrow} alt="Build Labour" /> </a>

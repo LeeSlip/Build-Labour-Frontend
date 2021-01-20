@@ -155,18 +155,6 @@ export const pageQuery = graphql`
                 }
                 link
               }
-              slides_mobile {
-                image {
-                  localFile {
-                    childImageSharp {
-                      original {
-                        src
-                      }
-                    }
-                  }
-                }
-                link
-              }
             }
             ... on WordPressAcf_faq {
               bgColour
