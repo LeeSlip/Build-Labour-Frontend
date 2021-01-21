@@ -1,15 +1,9 @@
 .page-banner {
   position: relative;
-  // height: fit-content;
   width: 100%;
   padding-bottom: 40px;
   margin-bottom: -25px;
-  /* Set a specific height */
   height: fit-content;
-  /* Create the parallax scrolling effect */
-
-
-  /* Preserve aspect ratio */
   @include breakpoint (medium) {
     width: 100vw;
     height: 100%;
@@ -22,12 +16,8 @@
     width: 100vw;
     height: 100%;
     background-size: cover;
-    background-attachment: fixed;
     background-position: center center;
     background-attachment: scroll;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     z-index: -2;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -36,8 +26,6 @@
     image-rendering: -moz-crisp-edges;          /* Firefox */
     image-rendering: -o-crisp-edges;            /* Opera */
     image-rendering: -webkit-optimize-contrast; 
-    // top: 0; 
-    // left: 0; 
     @include breakpoint (medium) {
       background-attachment: fixed;
     }
