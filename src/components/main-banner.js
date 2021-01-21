@@ -14,7 +14,7 @@ class MainBanner extends Component {
 
     return (
       <>
-        <section className="main-banner">
+        <section className="main-banner" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
           <div className="main-banner__inner">
             <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
             <Fade bottom>
