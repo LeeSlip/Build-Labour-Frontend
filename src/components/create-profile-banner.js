@@ -12,10 +12,10 @@ class CreateProfileBanner extends Component {
       <>
         <div className="create-profile-banner">
           <div className="create-profile-banner__inner">
-            <Fade bottom>
+            <Fade>
               <p className='title'>{title}</p>
             </Fade>
-            <Fade bottom>
+            <Fade>
               <p className='subheading'>{subheading}</p>
             </Fade>
             <div className="content-div">
@@ -27,7 +27,7 @@ class CreateProfileBanner extends Component {
                         <ul>
                           {el.bullets && el.bullets.map((ele, j) => {
                             return (
-                              <Fade bottom>
+                              <Fade>
                                 <li key={j}>{ele.bullet}</li>
                               </Fade>
 
@@ -35,7 +35,7 @@ class CreateProfileBanner extends Component {
                           }
                           )}
                         </ul>
-                        <Fade bottom>
+                        <Fade>
                           <p className="tagline">{el.tagline}</p>
                         </Fade>
                       </Fade>
@@ -44,7 +44,7 @@ class CreateProfileBanner extends Component {
                 }
                 )}
             </div>
-            <Fade jump>
+            <Fade>
               <img className="arrow" src={arrow} alt="Build Labour" />
             </Fade>
             <Fade>
