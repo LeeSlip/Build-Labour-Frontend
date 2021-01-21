@@ -4,6 +4,9 @@
   position: fixed; 
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 
   &__inner {
     position: absolute;
