@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Slider from 'react-slick'
 import arrow from '../assets/images/arrow.svg'
+import Fade from 'react-reveal/Fade'
 
 class SliderLink extends Component {
   state = {
@@ -32,21 +33,23 @@ class SliderLink extends Component {
     return (
       <>
         <div className="slider" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
-          <div className="slider__inner">
-            <Slider ref={slider => (this.slider = slider)} {...settings}>
-              {
-                slides && slides.map((el, i) => {
-                  return (
-                    <a href={el.link && el.link ? el.link : null} key={i}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" /> </a>
-                  )
-                }
-                )}
-            </Slider>
-            <div className="slider__nav">
-              <a className="previous" href='//' onClick={(e) => this._goToSlide(e, activeSlide - 1)}><img src={arrow} alt="Build Labour" /></a>
-              <a className="next" href='//' onClick={(e) => this._goToSlide(e, activeSlide + 1)}><img src={arrow} alt="Build Labour" /> </a>
+          <Fade>
+            <div className="slider__inner">
+              <Slider ref={slider => (this.slider = slider)} {...settings}>
+                {
+                  slides && slides.map((el, i) => {
+                    return (
+                      <a href={el.link && el.link ? el.link : null} key={i}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" /> </a>
+                    )
+                  }
+                  )}
+              </Slider>
+              <div className="slider__nav">
+                <a className="previous" href='//' onClick={(e) => this._goToSlide(e, activeSlide - 1)}><img src={arrow} alt="Build Labour" /></a>
+                <a className="next" href='//' onClick={(e) => this._goToSlide(e, activeSlide + 1)}><img src={arrow} alt="Build Labour" /> </a>
+              </div>
             </div>
-          </div>
+          </Fade>
         </div>
       </>
     )

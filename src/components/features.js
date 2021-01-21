@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Fade from 'react-reveal/Fade'
 
 class Features extends Component {
 
@@ -9,17 +10,21 @@ class Features extends Component {
       <>
         <section className="features">
           <div className="features__inner">
-            <p className="heading">{title}</p>
+            <Fade>
+              <p className="heading">{title}</p>
+            </Fade>
             <div className="blocks">
               {
                 blocks && blocks.map((el, i) => (
-                  <div className="block" key={i} href={el.link}>
-                    <img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" />
-                    <div className="title-text">
-                      <p className="title">{el.heading}</p>
-                      <p className="text">{el.content}</p>
+                  <Fade>
+                    <div className="block" key={i} href={el.link}>
+                      <img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour" />
+                      <div className="title-text">
+                        <p className="title">{el.heading}</p>
+                        <p className="text">{el.content}</p>
+                      </div>
                     </div>
-                  </div>
+                  </Fade>
                 ))
               }
             </div>
