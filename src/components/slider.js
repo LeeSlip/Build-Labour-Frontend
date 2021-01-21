@@ -14,7 +14,7 @@ class SliderLink extends Component {
   }
 
   render() {
-    const { slides } = this.props;
+    const { slides, background } = this.props;
     const { activeSlide } = this.state
 
     const settings = {
@@ -31,7 +31,7 @@ class SliderLink extends Component {
 
     return (
       <>
-        <div className="slider">
+        <div className="slider" style={{ backgroundImage: background.localFile.childImageSharp.original.src }}>
           <div className="slider__inner">
             <Slider ref={slider => (this.slider = slider)} {...settings}>
               {

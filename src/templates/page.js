@@ -143,6 +143,15 @@ export const pageQuery = graphql`
               }
             }
             ... on WordPressAcf_slider {
+              background {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
               slides {
                 image {
                   localFile {
