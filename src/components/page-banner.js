@@ -30,7 +30,7 @@ class PageBanner extends Component {
     return (
       <>
         <section className="page-banner">
-          <div className="background" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
+          <div className="background" >
             <div className="tint" />
           </div>
           <div className="page-banner__inner">
