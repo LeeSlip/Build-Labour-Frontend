@@ -45,7 +45,7 @@ class Accordion extends Component {
 
     return (
       <section className='accordion'>
-        <div className="background">
+        <div className="background" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
           <div className="tint" />
         </div>
         <div className='accordion__inner'>
