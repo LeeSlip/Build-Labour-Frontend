@@ -30,39 +30,38 @@ class PageBanner extends Component {
     return (
       <>
         <section className="page-banner">
-          <div className="background" >
-            <div className="background" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
-              <div className="tint" />
-            </div>
-            <div className="page-banner__inner">
-              <div className="title-content">
-                <Fade>
-                  <h2>{title}</h2>
-                </Fade>
-                <Fade>
-                  <h3>{content}</h3>
-                </Fade>
-                <div className="buttons">
-                  {
-                    buttons && buttons.map((el, i) => (
-                      <Fade>
-                        <a className="btn" key={i} href={el.link}>{el.text}</a>
-                      </Fade>
-                    ))
-                  }
-                </div>
+          <div className="background" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
+            <div className="tint" />
+          </div>
+          <div className="page-banner__inner">
+            <div className="title-content">
+              <Fade>
+                <h2>{title}</h2>
+              </Fade>
+              <Fade>
+                <h3>{content}</h3>
+              </Fade>
+              <div className="buttons">
+                {
+                  buttons && buttons.map((el, i) => (
+                    <Fade>
+                      <a className="btn" key={i} href={el.link}>{el.text}</a>
+                    </Fade>
+                  ))
+                }
               </div>
-              <img src={image.localFile.childImageSharp.original.src} alt="Build Labour" />
             </div>
-            <Slider {...settings}>
-              {
-                slides && slides.map((el, i) => {
-                  return (
-                    <img src={el.image.localFile.childImageSharp.original.src} key={i} alt={el.alt_text} />
-                  )
-                })
-              }
-            </Slider>
+            <img src={image.localFile.childImageSharp.original.src} alt="Build Labour" />
+          </div>
+          <Slider {...settings}>
+            {
+              slides && slides.map((el, i) => {
+                return (
+                  <img src={el.image.localFile.childImageSharp.original.src} key={i} alt={el.alt_text} />
+                )
+              })
+            }
+          </Slider>
         </section>
       </>
     )
