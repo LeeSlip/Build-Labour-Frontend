@@ -9,7 +9,7 @@ class MainBanner extends Component {
 
 
   render() {
-    let { logo, title, buttons, socials } = this.props;
+    let { background, logo, title, buttons, socials } = this.props;
 
 
     return (
