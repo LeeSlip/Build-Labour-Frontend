@@ -44,7 +44,7 @@ class CreateProfileBanner extends Component {
                 }
                 )}
             </div>
-            <Fade>
+            <Fade jump>
               <img className="arrow" src={arrow} alt="Build Labour" />
             </Fade>
             <Fade>

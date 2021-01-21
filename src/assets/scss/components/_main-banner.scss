@@ -84,11 +84,6 @@
       img {
         height: 15px;
         object-fit: contain;
-        margin-left: 1px;
-        margin-top: 2px;
-        @include breakpoint (medium) {
-          margin-left: 0;
-        }
       }
     }
   }
