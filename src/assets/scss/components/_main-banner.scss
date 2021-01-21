@@ -5,9 +5,6 @@
   background-image: url('../../assets/images/mainbanner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  @include breakpoint (medium) {
-    height: 900px;
-  }
 
   &__inner {
     position: absolute;

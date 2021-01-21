@@ -8,17 +8,18 @@
   @include breakpoint (medium) {
   }
 
-  &__inner {
-    height: 100vh;
+  &__inner {    
+    height: 100%;
     width: 100%;
     max-width: 1200px;
     flex-direction: column;
     padding: 80px 40px 40px;
     margin: 0 auto;
     display: flex; 
+    justify-content: center;
     @include breakpoint (medium) {
+      height: 100vh;
       padding: 120px 40px 40px;
-      justify-content: space-evenly;
     }
 
     img {
