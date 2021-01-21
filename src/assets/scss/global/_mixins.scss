@@ -14,7 +14,7 @@ BREAKPOINTS
     }
   }
    @else if $point == medium {
-    @media (min-width: 800px) {
+    @media (min-width: 850px) {
       @content;
     }
   } @else if $point == small {

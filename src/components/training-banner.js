@@ -10,7 +10,8 @@ class TrainingBanner extends Component {
 
     return (
       <>
-        <section className="training-banner" style={{ backgroundImage: background.localFile.childImageSharp.original.src }}>
+        <section className="training-banner">
+          <div className='background' style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }} />
           <div className="training-banner__inner">
             <Fade bottom>
               <h1>{title}</h1>

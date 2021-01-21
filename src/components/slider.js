@@ -31,7 +31,7 @@ class SliderLink extends Component {
 
     return (
       <>
-        <div className="slider" style={{ backgroundImage: background.localFile.childImageSharp.original.src }}>
+        <div className="slider" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
           <div className="slider__inner">
             <Slider ref={slider => (this.slider = slider)} {...settings}>
               {
