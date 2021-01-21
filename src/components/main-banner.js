@@ -17,7 +17,7 @@ class MainBanner extends Component {
         <section className="main-banner">
           <div className="main-banner__inner">
             <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
-            <Fade clear delay={2000}>
+            <Fade>
               <h1>{title}</h1>
             </Fade>
             <Fade bottom>
