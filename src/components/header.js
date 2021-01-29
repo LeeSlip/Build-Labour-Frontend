@@ -74,10 +74,10 @@ class Header extends Component {
 
         <div className={`off-canvas ${this.state.menuActive ? 'active' : ''}`}>
           <nav className='off-canvas__nav'>
-            <Link onClick={this.scrollTop} to="/find-work">Find Work</Link>
-            <Link onClick={this.scrollTop} to="/find-workers">Find Workers</Link>
-            <Link onClick={this.scrollTop} to="/find-training">Find Training</Link>
-            <Link onClick={this.scrollTop} to="/about">About</Link>
+            <Link onClick={this.scrollTop, this._toggleOffCanvas} to="/find-work">Find Work</Link>
+            <Link onClick={this.scrollTop, this._toggleOffCanvas} to="/find-workers">Find Workers</Link>
+            <Link onClick={this.scrollTop, this._toggleOffCanvas} to="/find-training">Find Training</Link>
+            <Link onClick={this.scrollTop, this._toggleOffCanvas} to="/about">About</Link>
           </nav>
         </div>
       </>
