@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Link from "../utils/link.js"
 import Fade from 'react-reveal/Fade'
 
 class MainBanner extends Component {
@@ -24,7 +25,7 @@ class MainBanner extends Component {
               <div className="buttons">
                 {
                   buttons && buttons.map((el, i) => (
-                    <a className="btn" onClick={this.scrollTop} key={i} href={el.link}>{el.text}</a>
+                    <Link className="btn" onClick={this.scrollTop} key={i} to={el.link}>{el.text}</Link>
                   ))
                 }
               </div>

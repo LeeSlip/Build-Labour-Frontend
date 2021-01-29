@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import Logo from '../assets/images/logo.png'
 import insta from '../assets/images/instagram-white.svg'
 import facebook from '../assets/images/facebook-white.svg'
+import Link from "../utils/link.js"
+
 
 
 class Header extends Component {
@@ -51,12 +53,12 @@ class Header extends Component {
       <>
         <section className="header">
           <div className="header__inner">
-            <a className="logo" href="/"><img src={Logo} alt="Build Labour" /></a>
+            <Link className="logo" to="/"><img src={Logo} alt="Build Labour" /></Link>
             <nav>
-              <a onClick={this.scrollTop} href="/find-work">Find Work</a>
-              <a onClick={this.scrollTop} href="/find-workers">Find Workers</a>
-              <a onClick={this.scrollTop} href="/find-training">Find Training</a>
-              <a onClick={this.scrollTop} href="/about">About</a>
+              <Link onClick={this.scrollTop} to="/find-work">Find Work</Link>
+              <Link onClick={this.scrollTop} to="/find-workers">Find Workers</Link>
+              <Link onClick={this.scrollTop} to="/find-training">Find Training</Link>
+              <Link onClick={this.scrollTop} to="/about">About</Link>
 
               <div className="socials">
                 <a href="https://www.instagram.com/buildlabour" target='_blank' rel='nofollow noopener noreferrer'><img src={insta} alt="Build Labour Instagram" /></a>
@@ -72,10 +74,10 @@ class Header extends Component {
 
         <div className={`off-canvas ${this.state.menuActive ? 'active' : ''}`}>
           <nav className='off-canvas__nav'>
-            <a onClick={this.scrollTop} href="/find-work">Find Work</a>
-            <a onClick={this.scrollTop} href="/find-workers">Find Workers</a>
-            <a onClick={this.scrollTop} href="/find-training">Find Training</a>
-            <a onClick={this.scrollTop} href="/about">About</a>
+            <Link onClick={this.scrollTop} to="/find-work">Find Work</Link>
+            <Link onClick={this.scrollTop} to="/find-workers">Find Workers</Link>
+            <Link onClick={this.scrollTop} to="/find-training">Find Training</Link>
+            <Link onClick={this.scrollTop} to="/about">About</Link>
           </nav>
         </div>
       </>

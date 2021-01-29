@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Link from "../utils/link.js"
 
 class Footer extends Component {
 
@@ -9,8 +10,8 @@ class Footer extends Component {
       <>
         <section className="footer">
           <div className="footer__inner">
-            <a href="/privacy">Privacy Policy</a>
-            <a href="/terms-and-conditions">Terms and Conditions</a>
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms-and-conditions">Terms and Conditions</Link>
           </div>
         </section>
       </>
