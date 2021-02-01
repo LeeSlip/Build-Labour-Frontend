@@ -16,12 +16,10 @@ class MainBanner extends Component {
     return (
       <>
         <section className="main-banner" style={{ backgroundImage: 'url(' + background.localFile.childImageSharp.original.src + ')' }}>
-          <div className="main-banner__inner">
-            <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
-            <Fade>
+          <Fade>
+            <div className="main-banner__inner">
+              <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
               <h1>{title}</h1>
-            </Fade>
-            <Fade>
               <div className="buttons">
                 {
                   buttons && buttons.map((el, i) => (
@@ -29,17 +27,15 @@ class MainBanner extends Component {
                   ))
                 }
               </div>
-            </Fade>
-            <div className="socials">
-              {
-                socials && socials.map((el, i) => (
-                  <Fade>
+              <div className="socials">
+                {
+                  socials && socials.map((el, i) => (
                     <a className="social" key={i} href={'https://' + el.link}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour Social" /></a>
-                  </Fade>
-                ))
-              }
+                  ))
+                }
+              </div>
             </div>
-          </div>
+          </Fade>
         </section>
       </>
     )
