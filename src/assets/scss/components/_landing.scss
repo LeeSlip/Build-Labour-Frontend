@@ -59,11 +59,13 @@
       margin: 0 auto;
       color: yellow;
       font-size: 50px;
-      line-height: 55px;
+      line-height: 50px;
       text-align: center;
       font-weight: bold;
       max-width: 800px;
       margin-top: 50px;
+      padding: 0 12px;
+      margin-bottom: 20px;
       @include breakpoint (medium) {
         font-size: 60px;
       }
@@ -73,7 +75,7 @@
       margin: 0 auto;
       color: $color--white;
       font-size: 30px;
-      line-height:40px;
+      line-height:30px;
       text-align: center;
       font-family: $font;
       font-weight: bold;
@@ -89,6 +91,7 @@
       display: flex;
       justify-content: center;
       width: 280px;
+      margin-bottom: 12px;
       @include breakpoint (medium) {
         width: 450px;
       }
@@ -142,6 +145,7 @@
       overflow:hidden;
       margin:24px auto;
       padding: 0 20px;
+      display: none;
       @include breakpoint (medium) {
         overflow: visible;
         max-width: $content-width;
