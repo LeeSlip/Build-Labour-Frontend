@@ -88,6 +88,55 @@ export const pageQuery = graphql`
                 }
               }
             }
+            ... on WordPressAcf_landing {
+              background {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              heading
+              subheading
+              logo {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              buttons {
+                link
+                text
+              }
+              socials {
+                link
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+              repeater {
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+            }
             ... on WordPressAcf_training_banner {
               background {
                 localFile {

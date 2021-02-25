@@ -1,0 +1,234 @@
+.landing {
+  width: 100%; 
+  height: 100%; 
+  position: fixed; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+  .background {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    z-index: -2;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;          /* Firefox */
+    image-rendering: -o-crisp-edges;            /* Opera */
+    image-rendering: -webkit-optimize-contrast; 
+    @include breakpoint (medium) {
+      background-attachment: fixed;
+    }
+  }
+
+  .tint {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background: $color--blue;
+    opacity: 0.8;
+    mix-blend-mode: multiply;
+    z-index: -1;
+    
+  }
+
+  &__inner {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0 40px;;
+    margin: 0 auto;
+
+    img {
+      width: 130px;
+      height: 60px;
+      margin: 0 auto;
+    }
+
+    .heading {
+      margin: 0 auto;
+      color: yellow;
+      font-size: 50px;
+      line-height: 55px;
+      text-align: center;
+      font-weight: bold;
+      max-width: 800px;
+      margin-top: 50px;
+      @include breakpoint (medium) {
+        font-size: 60px;
+        margin-bottom: -50px;
+      }
+    }
+
+    .subheading {
+      margin: 0 auto;
+      color: $color--white;
+      font-size: 30px;
+      line-height:40px;
+      text-align: center;
+      font-family: $font;
+      font-weight: bold;
+      max-width: 800px;
+      padding: 0 12px;
+      @include breakpoint (medium) {
+        font-size: 40px;
+      }
+    }
+
+    .buttons {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      width: 280px;
+      @include breakpoint (medium) {
+        width: 450px;
+      }
+
+      .btn {
+        background: yellow;
+        color: $color--black;
+        font-weight: bold;
+
+        &:hover {
+          background: yellow;
+          color: $color--grey;
+        }
+      }
+    }
+
+    .socials {
+      margin: 0 auto;
+      width: 70px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .social {
+      height: 28px;
+      width: 28px;
+      background: #fff200;;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 50px;
+
+      &:hover {
+        // background: $color--blue;
+        opacity: 0.7;
+
+        img {
+
+        }
+      }
+
+      img {
+        height: 15px;
+        object-fit: contain;
+      }
+    }
+
+    .slick-slider {
+      position: relative;
+      width: 100%;
+      overflow:hidden;
+      margin:24px auto;
+      padding: 0 20px;
+      @include breakpoint (medium) {
+        overflow: visible;
+        max-width: $content-width;
+        margin: 20px auto;
+      }
+      .slick-next {
+        display: none;
+        height: 0;
+        visibility: hidden;
+        z-index: 100;
+        cursor:pointer;
+        @include breakpoint (medium) {
+          display: block;
+          visibility: visible;
+          position: absolute;
+          width: 29px;
+          height: 30px;
+          bottom: -65px;
+          right: calc(50% - 65px);
+        }
+      }
+      .slick-prev {
+        height: 0;
+        display: none;
+        visibility: hidden;
+        z-index: 100;
+        cursor:pointer;
+        @include breakpoint (medium) {
+          display: block;
+          visibility: visible;
+          position: absolute;
+          width: 29px;
+          height: 30px;
+          bottom: -65px;
+          left: calc(50% - 5px);
+        }
+      }
+      .slick-slide {
+        width: 100%;
+        cursor:pointer;
+        transition:all ease-in-out 0.3s;
+        outline: none;
+        visibility: hidden;
+        margin: 0 12px;
+        @include breakpoint (medium) {
+          visibility: visible;
+          max-width: 400px;
+        }
+  
+        div {
+          display: flex;
+          justify-content: center;
+  
+          img {
+            width: 300px !important;
+            height: 100%;
+          }
+        }
+      }
+      .slick-active { 
+        visibility: visible;
+        
+        div {
+          display: flex;
+          justify-content: center;
+  
+          img {
+            width: 300px !important;
+            outline: none;
+          }
+        }
+      }
+  
+      .slick-list {
+        overflow: hidden;
+      }
+  
+      .slick-track {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        @include breakpoint (medium) {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}

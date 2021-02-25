@@ -11,6 +11,7 @@ import Features from '../components/features'
 import Courses from '../components/courses'
 import CourseEnquiry from '../components/course-enquiry'
 import Content from '../components/content'
+import Landing from '../components/landing'
 
 
 const renderBlock = (param, el, i, page = {}) => {
@@ -27,6 +28,7 @@ const renderBlock = (param, el, i, page = {}) => {
     'WordPressAcf_courses': (el, i) => <Courses key={i} {...el} />,
     'WordPressAcf_course_enquiry': (el, i) => <CourseEnquiry key={i} {...el} />,
     'WordPressAcf_content': (el, i) => <Content key={i} {...el} />,
+    'WordPressAcf_landing': (el, i) => <Landing key={i} {...el} />,
 
   }[param]
 
