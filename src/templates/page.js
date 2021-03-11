@@ -136,6 +136,59 @@ export const pageQuery = graphql`
                   }
                 }
               }
+            }            
+            ... on WordPressAcf_landing_jobs {
+              background {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              heading
+              subheading
+              logo {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              buttons {
+                link
+                text
+              }
+              socials {
+                link
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+              jobs {
+                title
+                company
+                salary
+                location
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
             }
             ... on WordPressAcf_training_banner {
               background {
