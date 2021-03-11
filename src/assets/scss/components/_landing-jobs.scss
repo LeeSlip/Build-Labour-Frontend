@@ -65,8 +65,8 @@
       max-width: 800px;
       margin-top: 50px;
       @include breakpoint (medium) {
-        font-size: 60px;
-        line-height: 65px;
+        font-size: 50px;
+        line-height: 60px;
       }
     }
 
@@ -108,9 +108,13 @@
     }
 
     .jobs {
+      display: none;
+      @include breakpoint (small) {
+      display: block;
       max-width: 500px;
       width: 100%;
       margin: 0 auto;
+      }
 
       .job {
         display: flex;
@@ -119,6 +123,10 @@
         padding: 20px;
         justify-content: space-between;
         margin-bottom: 12px;
+        cursor: default;
+        &:hover {
+          background: black;
+        }
 
         img {
           width: 30%;
