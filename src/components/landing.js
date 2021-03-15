@@ -6,7 +6,7 @@ import Link from "../utils/link.js"
 class Landing extends Component {
 
   render() {
-    let { background, logo, heading, subheading, repeater, buttons, socials } = this.props
+    let { background, logo, heading, subheading, repeater, buttons, socials, image } = this.props
 
     const settings = {
       dots: false,
