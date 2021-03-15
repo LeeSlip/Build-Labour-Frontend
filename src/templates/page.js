@@ -110,6 +110,15 @@ export const pageQuery = graphql`
                 }
               }
               buttons {
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
                 link
                 text
               }
@@ -159,6 +168,15 @@ export const pageQuery = graphql`
                 }
               }
               buttons {
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
                 link
                 text
               }
@@ -174,17 +192,11 @@ export const pageQuery = graphql`
                   }
                 }
               }
-              jobs {
-                title
-                company
-                salary
-                location
-                image {
-                  localFile {
-                    childImageSharp {
-                      original {
-                        src
-                      }
+              image {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
                     }
                   }
                 }

@@ -39,7 +39,7 @@ class Landing extends Component {
             <div className="landing__inner">
               <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
               <p className="heading">{heading}</p>
-              <p className="subheading">{subheading}</p>
+              {/* <p className="subheading">{subheading}</p> */}
               <Slider {...settings}>
                 {
                   repeater && repeater.map((el, i) => {
@@ -52,7 +52,7 @@ class Landing extends Component {
               <div className="buttons">
                 {
                   buttons && buttons.map((el, i) => (
-                    <Link className="btn" onClick={this.scrollTop} key={i} to={el.link}>{el.text}</Link>
+                    <Link className="btn" onClick={this.scrollTop} key={i} to={el.link}><div className="image" style={el.image && el.image ? { backgroundImage: 'url(' + el.image.localFile.childImageSharp.original.src + ')', marginRight: 6 } : { backgroundImage: null, height: 0, width: 0, }}> </div> { el.text}</Link>
                   ))
                 }
               </div>

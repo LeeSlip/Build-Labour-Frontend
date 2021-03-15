@@ -6,7 +6,7 @@ import Link from "../utils/link.js"
 class LandingJobs extends Component {
 
   render() {
-    let { background, logo, heading, subheading, buttons, socials, jobs } = this.props
+    let { background, logo, heading, subheading, buttons, socials, image } = this.props
 
     const settings = {
       dots: false,
@@ -39,26 +39,12 @@ class LandingJobs extends Component {
             <div className="landing-jobs__inner">
               <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
               <p className="heading">{heading}</p>
-              <p className="subheading">{subheading}</p>
-              <div className="jobs">
-                {
-                  jobs && jobs.map((el, i) => (
-                    <div key={i} className='job'>
-                      <img src={el.image.localFile.childImageSharp.original.src} />
-                      <div className="content">
-                        <h5>{el.company}</h5>
-                        <h6>{el.title}</h6>
-                        <p>{el.location}</p>
-                        <p>{el.salary}</p>
-                      </div>
-                    </div>
-                  ))
-                }
-              </div>
+              {/* <p className="subheading">{subheading}</p> */}
+              <img className="banner-image" src={image.localFile.childImageSharp.original.src} />
               <div className="buttons">
                 {
                   buttons && buttons.map((el, i) => (
-                    <Link className="btn" onClick={this.scrollTop} key={i} to={el.link}>{el.text}</Link>
+                    <Link className="btn" onClick={this.scrollTop} key={i} to={el.link}><div className="image" style={el.image && el.image ? { backgroundImage: 'url(' + el.image.localFile.childImageSharp.original.src + ')', marginRight: 6 } : { backgroundImage: null, height: 0, width: 0, }}> </div> { el.text}</Link>
                   ))
                 }
               </div>

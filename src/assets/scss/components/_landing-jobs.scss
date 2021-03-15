@@ -32,7 +32,7 @@
     height: 100%;
     position: absolute;
     width: 100%;
-    background: $color--blue;
+    background: $color--grey;
     opacity: 0.8;
     mix-blend-mode: multiply;
     z-index: -1;
@@ -87,6 +87,17 @@
       }
     }
 
+    .banner-image {
+      display: none;
+      border: 5px solid white;
+      max-width: 500px;
+      height: auto;
+      width: 100%;
+      @include breakpoint (small) {
+        display: block;
+      }
+    }
+
     .buttons {
       margin: 0 auto;
       // display: flex;
@@ -95,10 +106,10 @@
       display: flex;
       flex-direction: column;
       @include breakpoint (medium) {
-        max-width: 850px;
+        max-width: 280px;
         width: 100%;
         justify-content: space-evenly;
-        flex-direction: row;
+        flex-direction: column;
       }
 
       .btn {
@@ -109,65 +120,22 @@
         padding: 10px 23px;
         font-size: 14px;
         text-align: center;
-        @include breakpoint (medium) {
-          margin-bottom: 0;
-        }
-
-        &:hover {
-          background: yellow;
-          color: $color--grey;
-        }
-      }
-    }
-
-    .jobs {
-      display: none;
-      @include breakpoint (small) {
-      display: block;
-      max-width: 500px;
-      width: 100%;
-      margin: 0 auto;
-      }
-
-      .job {
         display: flex;
-        background: $color--grey;
         align-items: center;
-        padding: 20px;
-        justify-content: space-between;
-        margin-bottom: 12px;
-        cursor: default;
+        justify-content: center;
+        @include breakpoint (medium) {
+          margin-bottom: 10px;
+        }
+
+        .image {
+          width: 16px;
+          height: 16px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
         &:hover {
-          background: black;
-        }
-
-        img {
-          width: 30%;
-          object-fit: contain;
-        }
-
-        .content {
-          width: 60%;
-
-          h5 {
-            color: $color--blue;
-            font-weight: bold;
-            margin-bottom: 5px;
-          }
-
-          h6 {
-            color: $color--yellow;
-            font-weight: bold;
-            margin-bottom: 8px;
-          }
-
-          p {
-            color: #fff;
-            font-size: 12px;
-            line-height: 18px;
-            margin: 0;
-          }
-
+          opacity: 0.7;
         }
       }
     }

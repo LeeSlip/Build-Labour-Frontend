@@ -32,7 +32,7 @@
     height: 100%;
     position: absolute;
     width: 100%;
-    background: $color--blue;
+    background: $color--grey;
     opacity: 0.8;
     mix-blend-mode: multiply;
     z-index: -1;
@@ -89,21 +89,42 @@
 
     .buttons {
       margin: 0 auto;
-      display: flex;
+      // display: flex;
       justify-content: center;
       width: 280px;
+      display: flex;
+      flex-direction: column;
       @include breakpoint (medium) {
-        width: 450px;
+        max-width: 280px;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-direction: column;
       }
 
       .btn {
+        margin-bottom: 10px;
         background: yellow;
         color: $color--black;
         font-weight: bold;
+        padding: 10px 23px;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint (medium) {
+          margin-bottom: 10px;
+        }
+
+        .image {
+          width: 16px;
+          height: 16px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
 
         &:hover {
-          background: yellow;
-          color: $color--grey;
+          opacity: 0.7;
         }
       }
     }
