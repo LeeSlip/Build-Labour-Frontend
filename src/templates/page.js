@@ -134,6 +134,15 @@ export const pageQuery = graphql`
                   }
                 }
               }
+              image {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
               repeater {
                 image {
                   localFile {

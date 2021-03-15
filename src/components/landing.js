@@ -40,6 +40,7 @@ class Landing extends Component {
               <img src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
               <p className="heading">{heading}</p>
               {/* <p className="subheading">{subheading}</p> */}
+              <img className="banner-image" src={image.localFile.childImageSharp.original.src} />
               <Slider {...settings}>
                 {
                   repeater && repeater.map((el, i) => {
