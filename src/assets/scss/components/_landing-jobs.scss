@@ -88,13 +88,9 @@
     }
 
     .banner-image {
-      display: none;
       max-width: 500px;
       height: auto;
       width: 100%;
-      @include breakpoint (small) {
-        display: block;
-      }
     }
 
     .buttons {
