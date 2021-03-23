@@ -37,6 +37,107 @@ export const pageQuery = graphql`
         acf {
           content_blocks_page {
             __typename
+            ... on WordPressAcf_landing_banner {
+              background_image {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              logo {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              heading
+              subheading
+              button_title
+              button_link
+              button_text
+              socials {
+                link
+                text
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+              images {
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+              cta_heading
+              cta_subheading
+              arrow {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+            }
+            ... on WordPressAcf_landing_cta {
+              background_image {
+                localFile {
+                  childImageSharp {
+                    original {
+                      src
+                    }
+                  }
+                }
+              }
+              button_title
+              button_link
+              button_text
+              socials {
+                link
+                text
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            ... on WordPressAcf_landing_info {
+              points {
+                text
+                image {
+                  localFile {
+                    childImageSharp {
+                      original {
+                        src
+                      }
+                    }
+                  }
+                }
+              }
+            }
             ... on WordPressAcf_create_profile_banner {
               title
               subheading

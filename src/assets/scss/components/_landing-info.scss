@@ -1,0 +1,51 @@
+.landing-info {
+
+  &__inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: $content-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 100px 12px;
+    margin: 0 auto;
+    @include breakpoint (medium) {
+    }
+
+    .info {
+      @include breakpoint (medium) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .points {
+        width: 100%;
+        @include breakpoint (medium) {
+          width: 40%;
+        }
+
+        p {
+          text-align: left;
+          color: white;
+          margin: 0 auto;
+          font-size: 44px;
+          line-height: 44px;
+          font-weight: bold;
+          max-width: 900px;
+          margin-top: 50px;
+          padding: 0 12px;
+          margin-bottom: 30px; 
+          text-align: left;
+          @include breakpoint (medium) {
+            margin: 0;
+            padding: 0;
+            font-size: 30px;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+  }
+}

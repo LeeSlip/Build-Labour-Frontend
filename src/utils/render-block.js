@@ -13,6 +13,9 @@ import CourseEnquiry from '../components/course-enquiry'
 import Content from '../components/content'
 import Landing from '../components/landing'
 import LandingJobs from '../components/landing-jobs'
+import LandingBanner from '../components/landing-banner'
+import LandingCTA from '../components/landing-cta'
+import LandingInfo from '../components/landing-info'
 
 
 const renderBlock = (param, el, i, page = {}) => {
@@ -31,6 +34,9 @@ const renderBlock = (param, el, i, page = {}) => {
     'WordPressAcf_content': (el, i) => <Content key={i} {...el} />,
     'WordPressAcf_landing': (el, i) => <Landing key={i} {...el} />,
     'WordPressAcf_landing_jobs': (el, i) => <LandingJobs key={i} {...el} />,
+    'WordPressAcf_landing_banner': (el, i) => <LandingBanner key={i} {...el} />,
+    'WordPressAcf_landing_cta': (el, i) => <LandingCTA key={i} {...el} />,
+    'WordPressAcf_landing_info': (el, i) => <LandingInfo key={i} {...el} />,
 
 
   }[param]

@@ -1,0 +1,106 @@
+.landing-cta {
+  width: 100%; 
+  height: 100%; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+
+  &__inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: $content-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 12px;
+    margin: 0 auto;
+    @include breakpoint (medium) {
+      padding: 100px 12px;
+      height: 100%;
+    }
+
+
+    .button-title {
+      width: 100%;
+      @include breakpoint (medium) {
+        margin-bottom: 30px;
+      }
+      
+      p {
+        text-align: left;
+        color: white;
+        margin: 0 auto;
+        font-size: 44px;
+        line-height: 44px;
+        font-weight: bold;
+        margin-top: 50px;
+        padding: 0 12px;
+        margin-bottom: 30px;
+        width: 100%;
+        @include breakpoint (medium) {
+          margin: 0;
+          padding: 0;
+          font-size: 50px;
+          line-height: 55px;
+          width: 60%;
+          max-width: 900px;
+        }
+
+        span {
+          color: $color--yellow;
+        }
+      }
+    }
+
+    .btn {
+      background: yellow;
+      margin-bottom: 30px;
+      max-width: 400px;
+      text-align: center;
+      margin: 0 auto 30px;
+      @include breakpoint (medium) {
+        margin: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    .socials {
+      margin: 0 auto;
+      @include breakpoint (medium) {
+        display: flex;
+        margin: 0;
+      }
+
+      .social {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+        padding: 6px 12px;
+        @include breakpoint (medium) {
+          margin: 0;
+          margin-right: 20px;
+        }
+
+        &:first-of-type {
+          background: #fafafa;
+        }
+
+        &:last-of-type {
+          background: #3b5998;
+          color: white;
+        }
+
+        img {
+          height: 26px;
+          width: auto;
+          margin: 0;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+}
