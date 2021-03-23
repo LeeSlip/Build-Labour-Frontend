@@ -9,7 +9,7 @@ class LandingCTA extends Component {
       <>
         <section className="landing-cta" style={{ backgroundImage: 'url(' + background_image.localFile.childImageSharp.original.src + ')' }}>
           <div className="landing-cta__inner">
-            <p className="button-title" dangerouslySetInnerHTML={{ __html: button_title }}></p>
+            <div className="button-title" dangerouslySetInnerHTML={{ __html: button_title }}></div>
             <a className="btn" href={button_link}>{button_text}</a>
             <div className="socials">
               {

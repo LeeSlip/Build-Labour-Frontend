@@ -24,6 +24,7 @@
         width: 100%;
         @include breakpoint (medium) {
           width: 40%;
+          margin-bottom: 40px;
         }
 
         p {
