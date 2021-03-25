@@ -255,10 +255,14 @@
     display: none;
     @include breakpoint (medium) {
       display: block;
-    position: absolute;
-    width: 60px;
-    height: auto;
-    left: 55%;
+      position: absolute;
+      width: 60px;
+      height: auto;
+      left: 60%;
+    }
+    @include breakpoint (medium-large) {
+      width: 80px;
+      left: 55%;
     }
   }
 }
