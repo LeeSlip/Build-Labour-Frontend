@@ -45,10 +45,11 @@
         @include breakpoint (medium) {
           margin: 0;
           padding: 0;
-          font-size: 50px;
-          line-height: 55px;
-          width: 60%;
+          font-size: 70px;
+          line-height: 70px;
+          width: 70%;
           max-width: 900px;
+          margin-bottom: 30px;
         }
 
         span {
