@@ -201,7 +201,9 @@
         -o-object-fit: cover;
         object-fit: cover;
         max-width: 300px;
-        margin: -25px 0;
+        @include breakpoint (medium) {
+          margin: -25px 0;
+        }
       }
     }
   }
@@ -261,7 +263,7 @@
       position: absolute;
       width: 60px;
       height: auto;
-      left: 60%;
+      left: 64%;
     }
     @include breakpoint (medium-large) {
       width: 80px;
