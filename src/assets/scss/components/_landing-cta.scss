@@ -41,6 +41,7 @@
         padding: 0 12px;
         margin-bottom: 50px;
         width: 100%;
+        letter-spacing: -.06em;
         @include breakpoint (medium) {
           margin: 0;
           padding: 0;
@@ -51,7 +52,7 @@
         }
 
         span {
-          color: $color--yellow;
+          color: yellow;
         }
       }
     }
