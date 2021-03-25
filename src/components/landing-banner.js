@@ -19,7 +19,7 @@ class LandingBanner extends Component {
               <div className="socials">
                 {
                   socials && socials.map((el, i) => (
-                    <a className="social" key={i} href={'https://' + el.link}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour Social" />{el.text}</a>
+                    <a className="social" key={i} href={'https://' + el.link}><img src={el.image.localFile.childImageSharp.original.src} alt="Build Labour Social" /></a>
                   ))
                 }
               </div>

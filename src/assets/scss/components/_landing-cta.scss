@@ -69,36 +69,26 @@
     }
 
     .socials {
+      font-size: 18px;
       margin: 0 auto;
+      display: flex;
+      flex-direction: column;
       @include breakpoint (medium) {
-        display: flex;
         margin: 0;
+        display: flex;
+        flex-direction: row;
       }
 
       .social {
-        display: flex;
-        margin-bottom: 20px;
         align-items: center;
-        padding: 6px 12px;
+        margin-bottom: 20px;
+        height: auto;
+        width: 100%;
+        max-width: 200px;
         @include breakpoint (medium) {
+          display: flex;
           margin: 0;
           margin-right: 20px;
-        }
-
-        &:first-of-type {
-          background: #fafafa;
-        }
-
-        &:last-of-type {
-          background: #3b5998;
-          color: white;
-        }
-
-        img {
-          height: 26px;
-          width: auto;
-          margin: 0;
-          margin-right: 12px;
         }
       }
     }
