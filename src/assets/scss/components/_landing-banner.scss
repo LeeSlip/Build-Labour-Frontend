@@ -94,15 +94,13 @@
     }
 
     .subheading {
-      margin-bottom: 120px;
-      color: white;
-      margin: 0 auto;
+      color: #fff;
       font-size: 44px;
       line-height: 44px;
       text-align: left;
-      font-weight: bold;
+      font-weight: 700;
       max-width: 1200px;
-      margin-top: 50px;
+      margin: 0px 0 30px;
       padding: 0 12px;
       @include breakpoint (medium) {
         padding: 0;
@@ -174,6 +172,10 @@
           margin: 0;
           margin-right: 20px;
         }
+
+        img {
+          margin: 0;
+        }
       }
     }
 
@@ -183,6 +185,7 @@
       flex-direction: column;
       width: 300px;
       margin: 0 auto;
+      padding-bottom: 50px;
       @include breakpoint (medium) {
         position: absolute;
         right: 0px;
