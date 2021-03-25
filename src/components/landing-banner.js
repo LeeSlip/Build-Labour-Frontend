@@ -14,7 +14,7 @@ class LandingBanner extends Component {
               <img className="logo" src={logo.localFile.childImageSharp.original.src} alt="Build Labour" />
               <div className="heading" dangerouslySetInnerHTML={{ __html: heading }} ></div>
               <h5 className="subheading">{subheading}</h5>
-              <p className="button-title" dangerouslySetInnerHTML={{ __html: button_title }}></p>
+              <div className="button-title" dangerouslySetInnerHTML={{ __html: button_title }}></div>
               <a className="btn" href={button_link}>{button_text}</a>
               <div className="socials">
                 {
