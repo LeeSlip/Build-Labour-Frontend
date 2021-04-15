@@ -1,11 +1,10 @@
 .courses {
-
   &__inner {
     max-width: $content-width;
     width: 100%;
     margin: 0 auto;
     padding: 120px 20px;
-    @include breakpoint (medium) {
+    @include breakpoint(medium) {
       padding: 160px 20px;
     }
 
@@ -18,14 +17,23 @@
       margin-bottom: 40px;
     }
 
+    .text {
+      font-size: 24px;
+      line-height: 28px;
+      color: yellow;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
     .course {
       margin-bottom: 0px;
-      @include breakpoint (medium) {
+      @include breakpoint(medium) {
         margin-bottom: 30px;
       }
       img {
         width: 100%;
-        @include breakpoint (medium) {
+        @include breakpoint(medium) {
           max-width: 800px;
           margin: 0 auto;
           display: flex;
@@ -39,7 +47,7 @@
       max-width: fit-content;
       cursor: pointer;
       margin: 20px auto 0px;
-      @include breakpoint (medium) {
+      @include breakpoint(medium) {
         margin: 60px auto 0px;
       }
     }

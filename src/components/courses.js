@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 class Courses extends Component {
 
   render() {
-    let { title, courses, link_button } = this.props
+    let { title, courses, link_button, text } = this.props
 
     return (
       <>
@@ -12,6 +12,9 @@ class Courses extends Component {
           <div className="courses__inner">
             <Fade>
               <p className="title">{title}</p>
+            </Fade>
+            <Fade>
+              <div className="text" dangerouslySetInnerHTML={{ __html: text }}/>
             </Fade>
             {
               courses && courses.map((el, i) => (

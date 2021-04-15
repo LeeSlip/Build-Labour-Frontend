@@ -453,6 +453,7 @@ export const pageQuery = graphql`
             }
             ... on WordPressAcf_courses {
               title
+              text
               courses {
                 image {
                   localFile {
