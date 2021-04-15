@@ -18,12 +18,14 @@
     }
 
     .text {
-      font-size: 24px;
-      line-height: 28px;
-      color: yellow;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 40px;
+      p {
+        font-size: 24px;
+        line-height: 34px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+      }
     }
 
     .course {
