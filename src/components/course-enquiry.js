@@ -76,10 +76,12 @@ class CourseEnquiry extends Component {
             <a id="top" className="btn" href="/education-courses">View Courses</a>
             <form {...formProps}>
               <p className="label">What is your name?</p>
-              <input className='form-name' type='name' name='name' placeholder='Name' onChange={this.handleChange} required />
+              <input className='form-name' type='name' name='name' placeholder='Full Name' onChange={this.handleChange} required />
               <p className="label">What is your email?</p>
               <input className='form-name' type='email' name='email' placeholder='Email' onChange={this.handleChange} required />
-              <p className="label">What is your current level of education?</p>
+              <p className="label">What is your mobile number?</p>
+              <input className='form-name' type='phone' name='phone' placeholder='Phone' onChange={this.handleChange} required />
+              <p className="label">What is your current level of education completed?</p>
               <select className='form-name' id="education" name="education" onChange={this.handleChange} required>
                 <option selected="" value=""> Please Select </option>
                 <option name="education" value="Finished Year 10">Finished year 10</option>
@@ -101,6 +103,7 @@ class CourseEnquiry extends Component {
                 <option value="Certificate IV in Building and Construction (Building) (CPC40110)">Certificate IV in Building and Construction (Building) (CPC40110)</option>
                 <option value="Certificate IV in Plumbing and Services (CPC40912)">Certificate IV in Plumbing and Services (CPC40912)</option>
                 <option value="Diploma of Building and Construction (Building) (CPC50210)">Diploma of Building and Construction (Building) (CPC50210)</option>
+                <option value="I don't know">I don't know</option>
               </select>
               <p className="label">When are you looking to study?</p>
               <select className='form-name' type='time' name='time' onChange={this.handleChange} required>
@@ -112,7 +115,7 @@ class CourseEnquiry extends Component {
                 <option value="A year or more away">A year or more away</option>
               </select>
               <p className="label">What is your motivation to study?</p>
-              <textarea className='form-name' rows="4" type='motivation' name='motivation' placeholder='Motivation to study' onChange={this.handleChange} required />
+              <textarea className='form-name' rows="4" type='motivation' name='motivation' placeholder='Eg. Get a better job, earn more money, get my builders license' onChange={this.handleChange} required />
               <p className="label">What state do you live in?</p>
               <select className='form-name' type='state' name='state' onChange={this.handleChange} required>
                 <option selected="" value=""> Please Select </option>
